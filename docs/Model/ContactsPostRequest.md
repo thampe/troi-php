@@ -1,0 +1,57 @@
+# # ContactsPostRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**type** | **string** |  |
+**name** | **string** |  | [optional]
+**salutation** | **string** |  | [optional]
+**name1** | **string** |  |
+**name2** | **string** |  | [optional]
+**name3** | **string** |  | [optional]
+**categories** | [**\Troi\Model\ApiSyncItem[]**](ApiSyncItem.md) |  | [optional]
+**title** | **string** |  | [optional]
+**private_fax** | **string** |  | [optional]
+**private_mail** | **string** |  | [optional]
+**private_mobile** | **string** |  | [optional]
+**private_phone** | **string** |  | [optional]
+**private_web** | **string** |  | [optional]
+**private_address_city** | **string** |  | [optional]
+**private_address_country** | **string** |  | [optional]
+**private_address_country_iso** | **string** |  | [optional]
+**private_address_state** | **string** |  | [optional]
+**private_address_street** | **string** |  | [optional]
+**private_address_zip_code** | **string** |  | [optional]
+**birthday** | **string** |  | [optional]
+**position** | **string** |  | [optional]
+**office_phone** | **string** |  | [optional]
+**office_mobile** | **string** |  | [optional]
+**office_fax** | **string** |  | [optional]
+**office_mail** | **string** |  | [optional]
+**company_phone** | **string** |  | [optional]
+**company_fax** | **string** |  | [optional]
+**company_web** | **string** |  | [optional]
+**company_mail** | **string** |  | [optional]
+**company_address_city** | **string** |  | [optional]
+**company_address_country** | **string** |  | [optional]
+**company_address_country_iso** | **string** |  | [optional]
+**company_address_state** | **string** |  | [optional]
+**company_address_street** | **string** |  | [optional]
+**company_address_zip_code** | **string** |  | [optional]
+**remark** | **string** |  | [optional]
+**parent** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
+**employee** | [**\Troi\Model\ApiEmployee**](ApiEmployee.md) |  | [optional]
+**department** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
+**is_favorite** | **bool** |  | [optional]
+**is_inactive** | **bool** |  | [optional]
+**external_id** | **string** |  | [optional]
+**access_group** | **int** |  | [optional]
+**created_by** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
+**id** | **int** |  | [optional]
+**path** | **string** |  | [optional]
+**e_tag** | **string** |  | [optional]
+**is_deleted** | **bool** |  | [optional]
+**class_name** | **string** |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
