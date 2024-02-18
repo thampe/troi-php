@@ -84,7 +84,6 @@ class ApiAccountingEntry implements ModelInterface, ArrayAccess, \JsonSerializab
         'payment_term' => '\Troi\Model\ApiPaymentTerm',
         'project_number' => 'string',
         'id' => 'int',
-        'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
         'is_deleted' => 'bool',
@@ -125,7 +124,6 @@ class ApiAccountingEntry implements ModelInterface, ArrayAccess, \JsonSerializab
         'payment_term' => null,
         'project_number' => null,
         'id' => null,
-        'id' => null,
         'path' => null,
         'e_tag' => null,
         'is_deleted' => null,
@@ -163,7 +161,6 @@ class ApiAccountingEntry implements ModelInterface, ArrayAccess, \JsonSerializab
         'parent_id' => false,
         'payment_term' => false,
         'project_number' => false,
-        'id' => false,
         'id' => false,
         'path' => false,
         'e_tag' => false,
@@ -283,7 +280,6 @@ class ApiAccountingEntry implements ModelInterface, ArrayAccess, \JsonSerializab
         'payment_term' => 'PaymentTerm',
         'project_number' => 'ProjectNumber',
         'id' => 'id',
-        'id' => 'Id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
@@ -322,7 +318,6 @@ class ApiAccountingEntry implements ModelInterface, ArrayAccess, \JsonSerializab
         'payment_term' => 'setPaymentTerm',
         'project_number' => 'setProjectNumber',
         'id' => 'setId',
-        'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
         'is_deleted' => 'setIsDeleted',
@@ -360,7 +355,6 @@ class ApiAccountingEntry implements ModelInterface, ArrayAccess, \JsonSerializab
         'parent_id' => 'getParentId',
         'payment_term' => 'getPaymentTerm',
         'project_number' => 'getProjectNumber',
-        'id' => 'getId',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
@@ -1171,33 +1165,6 @@ class ApiAccountingEntry implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable project_number cannot be null');
         }
         $this->container['project_number'] = $project_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
 
         return $this;
     }

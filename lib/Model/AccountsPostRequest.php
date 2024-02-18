@@ -71,7 +71,6 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'tax_rate' => '\Troi\Model\ApiSyncItem',
         'account_group' => '\Troi\Model\ApiSyncItem',
         'id' => 'int',
-        'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
         'is_deleted' => 'bool',
@@ -99,7 +98,6 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'tax_rate' => null,
         'account_group' => null,
         'id' => null,
-        'id' => null,
         'path' => null,
         'e_tag' => null,
         'is_deleted' => null,
@@ -124,7 +122,6 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'is_locked_for_datev' => false,
         'tax_rate' => false,
         'account_group' => false,
-        'id' => false,
         'id' => false,
         'path' => false,
         'e_tag' => false,
@@ -231,7 +228,6 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'tax_rate' => 'TaxRate',
         'account_group' => 'AccountGroup',
         'id' => 'id',
-        'id' => 'Id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
@@ -257,7 +253,6 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'tax_rate' => 'setTaxRate',
         'account_group' => 'setAccountGroup',
         'id' => 'setId',
-        'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
         'is_deleted' => 'setIsDeleted',
@@ -282,7 +277,6 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'is_locked_for_datev' => 'getIsLockedForDatev',
         'tax_rate' => 'getTaxRate',
         'account_group' => 'getAccountGroup',
-        'id' => 'getId',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
@@ -741,33 +735,6 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable account_group cannot be null');
         }
         $this->container['account_group'] = $account_group;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
 
         return $this;
     }

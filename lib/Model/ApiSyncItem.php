@@ -71,7 +71,6 @@ class ApiSyncItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'ree_date' => 'object',
         'ree_service_id' => 'int',
         'id' => 'int',
-        'id' => 'int',
         'path' => 'string',
         'e_tag' => 'int',
         'is_deleted' => 'bool',
@@ -99,7 +98,6 @@ class ApiSyncItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'ree_date' => null,
         'ree_service_id' => null,
         'id' => null,
-        'id' => null,
         'path' => null,
         'e_tag' => null,
         'is_deleted' => null,
@@ -124,7 +122,6 @@ class ApiSyncItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'ree_quantity' => false,
         'ree_date' => false,
         'ree_service_id' => false,
-        'id' => false,
         'id' => false,
         'path' => false,
         'e_tag' => false,
@@ -231,7 +228,6 @@ class ApiSyncItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'ree_date' => 'ReeDate',
         'ree_service_id' => 'ReeServiceId',
         'id' => 'id',
-        'id' => 'Id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
@@ -257,7 +253,6 @@ class ApiSyncItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'ree_date' => 'setReeDate',
         'ree_service_id' => 'setReeServiceId',
         'id' => 'setId',
-        'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
         'is_deleted' => 'setIsDeleted',
@@ -282,7 +277,6 @@ class ApiSyncItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'ree_quantity' => 'getReeQuantity',
         'ree_date' => 'getReeDate',
         'ree_service_id' => 'getReeServiceId',
-        'id' => 'getId',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
@@ -729,33 +723,6 @@ class ApiSyncItem implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable ree_service_id cannot be null');
         }
         $this->container['ree_service_id'] = $ree_service_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
 
         return $this;
     }

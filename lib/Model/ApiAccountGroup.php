@@ -62,7 +62,6 @@ class ApiAccountGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'client' => '\Troi\Model\ApiSyncItem',
         'type' => 'int',
         'id' => 'int',
-        'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
         'is_deleted' => 'bool',
@@ -81,7 +80,6 @@ class ApiAccountGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'client' => null,
         'type' => null,
         'id' => null,
-        'id' => null,
         'path' => null,
         'e_tag' => null,
         'is_deleted' => null,
@@ -97,7 +95,6 @@ class ApiAccountGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => false,
         'client' => false,
         'type' => false,
-        'id' => false,
         'id' => false,
         'path' => false,
         'e_tag' => false,
@@ -195,7 +192,6 @@ class ApiAccountGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'client' => 'Client',
         'type' => 'Type',
         'id' => 'id',
-        'id' => 'Id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
@@ -212,7 +208,6 @@ class ApiAccountGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'client' => 'setClient',
         'type' => 'setType',
         'id' => 'setId',
-        'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
         'is_deleted' => 'setIsDeleted',
@@ -228,7 +223,6 @@ class ApiAccountGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'getName',
         'client' => 'getClient',
         'type' => 'getType',
-        'id' => 'getId',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
@@ -423,33 +417,6 @@ class ApiAccountGroup implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable type cannot be null');
         }
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
 
         return $this;
     }

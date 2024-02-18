@@ -70,7 +70,6 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_invoiced' => 'bool',
         'is_approved' => 'bool',
         'id' => 'int',
-        'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
         'is_deleted' => 'bool',
@@ -97,7 +96,6 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_invoiced' => null,
         'is_approved' => null,
         'id' => null,
-        'id' => null,
         'path' => null,
         'e_tag' => null,
         'is_deleted' => null,
@@ -121,7 +119,6 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_billed' => false,
         'is_invoiced' => false,
         'is_approved' => false,
-        'id' => false,
         'id' => false,
         'path' => false,
         'e_tag' => false,
@@ -227,7 +224,6 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_invoiced' => 'IsInvoiced',
         'is_approved' => 'IsApproved',
         'id' => 'id',
-        'id' => 'Id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
@@ -252,7 +248,6 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_invoiced' => 'setIsInvoiced',
         'is_approved' => 'setIsApproved',
         'id' => 'setId',
-        'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
         'is_deleted' => 'setIsDeleted',
@@ -276,7 +271,6 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_billed' => 'getIsBilled',
         'is_invoiced' => 'getIsInvoiced',
         'is_approved' => 'getIsApproved',
-        'id' => 'getId',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
@@ -695,33 +689,6 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable is_approved cannot be null');
         }
         $this->container['is_approved'] = $is_approved;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
 
         return $this;
     }

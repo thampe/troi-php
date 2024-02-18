@@ -69,7 +69,6 @@ class AbsencesPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'absence_unit' => 'int',
         'absence_hours' => 'int',
         'id' => 'int',
-        'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
         'is_deleted' => 'bool',
@@ -95,7 +94,6 @@ class AbsencesPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'absence_unit' => null,
         'absence_hours' => null,
         'id' => null,
-        'id' => null,
         'path' => null,
         'e_tag' => null,
         'is_deleted' => null,
@@ -118,7 +116,6 @@ class AbsencesPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'half_day' => false,
         'absence_unit' => false,
         'absence_hours' => false,
-        'id' => false,
         'id' => false,
         'path' => false,
         'e_tag' => false,
@@ -223,7 +220,6 @@ class AbsencesPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'absence_unit' => 'absenceUnit',
         'absence_hours' => 'absenceHours',
         'id' => 'id',
-        'id' => 'Id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
@@ -247,7 +243,6 @@ class AbsencesPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'absence_unit' => 'setAbsenceUnit',
         'absence_hours' => 'setAbsenceHours',
         'id' => 'setId',
-        'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
         'is_deleted' => 'setIsDeleted',
@@ -270,7 +265,6 @@ class AbsencesPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'half_day' => 'getHalfDay',
         'absence_unit' => 'getAbsenceUnit',
         'absence_hours' => 'getAbsenceHours',
-        'id' => 'getId',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
@@ -704,32 +698,6 @@ class AbsencesPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         return $this;
     }
 
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
 
     /**
      * Gets path

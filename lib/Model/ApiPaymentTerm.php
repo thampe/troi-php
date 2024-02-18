@@ -68,7 +68,6 @@ class ApiPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
         'discount_days4' => 'string',
         'discount_rate4' => 'string',
         'id' => 'int',
-        'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
         'is_deleted' => 'bool',
@@ -93,7 +92,6 @@ class ApiPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
         'discount_days4' => null,
         'discount_rate4' => null,
         'id' => null,
-        'id' => null,
         'path' => null,
         'e_tag' => null,
         'is_deleted' => null,
@@ -115,7 +113,6 @@ class ApiPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
         'discount_rate3' => false,
         'discount_days4' => false,
         'discount_rate4' => false,
-        'id' => false,
         'id' => false,
         'path' => false,
         'e_tag' => false,
@@ -219,7 +216,6 @@ class ApiPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
         'discount_days4' => 'DiscountDays4',
         'discount_rate4' => 'DiscountRate4',
         'id' => 'id',
-        'id' => 'Id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
@@ -242,7 +238,6 @@ class ApiPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
         'discount_days4' => 'setDiscountDays4',
         'discount_rate4' => 'setDiscountRate4',
         'id' => 'setId',
-        'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
         'is_deleted' => 'setIsDeleted',
@@ -264,7 +259,6 @@ class ApiPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
         'discount_rate3' => 'getDiscountRate3',
         'discount_days4' => 'getDiscountDays4',
         'discount_rate4' => 'getDiscountRate4',
-        'id' => 'getId',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
@@ -627,33 +621,6 @@ class ApiPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable discount_rate4 cannot be null');
         }
         $this->container['discount_rate4'] = $discount_rate4;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
 
         return $this;
     }

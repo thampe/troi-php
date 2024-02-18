@@ -91,7 +91,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'service_source' => 'string',
         'tax_rate' => '\Troi\Model\ApiService',
         'id' => 'int',
-        'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
         'is_deleted' => 'bool',
@@ -143,7 +142,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'service_source' => null,
         'tax_rate' => null,
         'id' => null,
-        'id' => null,
         'path' => null,
         'e_tag' => null,
         'is_deleted' => null,
@@ -192,7 +190,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'is_percentage_global' => false,
         'service_source' => false,
         'tax_rate' => false,
-        'id' => false,
         'id' => false,
         'path' => false,
         'e_tag' => false,
@@ -323,7 +320,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'service_source' => 'ServiceSource',
         'tax_rate' => 'TaxRate',
         'id' => 'id',
-        'id' => 'Id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
@@ -373,7 +369,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'service_source' => 'setServiceSource',
         'tax_rate' => 'setTaxRate',
         'id' => 'setId',
-        'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
         'is_deleted' => 'setIsDeleted',
@@ -422,7 +417,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'is_percentage_global' => 'getIsPercentageGlobal',
         'service_source' => 'getServiceSource',
         'tax_rate' => 'getTaxRate',
-        'id' => 'getId',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
@@ -1443,33 +1437,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
             throw new \InvalidArgumentException('non-nullable tax_rate cannot be null');
         }
         $this->container['tax_rate'] = $tax_rate;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
 
         return $this;
     }

@@ -66,7 +66,6 @@ class AccountingEntryCollectionsPostRequest implements ModelInterface, ArrayAcce
         'create_date' => 'string',
         'type' => 'int',
         'id' => 'int',
-        'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
         'is_deleted' => 'bool',
@@ -89,7 +88,6 @@ class AccountingEntryCollectionsPostRequest implements ModelInterface, ArrayAcce
         'create_date' => null,
         'type' => null,
         'id' => null,
-        'id' => null,
         'path' => null,
         'e_tag' => null,
         'is_deleted' => null,
@@ -109,7 +107,6 @@ class AccountingEntryCollectionsPostRequest implements ModelInterface, ArrayAcce
         'create_employee' => false,
         'create_date' => false,
         'type' => false,
-        'id' => false,
         'id' => false,
         'path' => false,
         'e_tag' => false,
@@ -211,7 +208,6 @@ class AccountingEntryCollectionsPostRequest implements ModelInterface, ArrayAcce
         'create_date' => 'CreateDate',
         'type' => 'Type',
         'id' => 'id',
-        'id' => 'Id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
@@ -232,7 +228,6 @@ class AccountingEntryCollectionsPostRequest implements ModelInterface, ArrayAcce
         'create_date' => 'setCreateDate',
         'type' => 'setType',
         'id' => 'setId',
-        'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
         'is_deleted' => 'setIsDeleted',
@@ -252,7 +247,6 @@ class AccountingEntryCollectionsPostRequest implements ModelInterface, ArrayAcce
         'create_employee' => 'getCreateEmployee',
         'create_date' => 'getCreateDate',
         'type' => 'getType',
-        'id' => 'getId',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
@@ -571,33 +565,6 @@ class AccountingEntryCollectionsPostRequest implements ModelInterface, ArrayAcce
             throw new \InvalidArgumentException('non-nullable type cannot be null');
         }
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
 
         return $this;
     }

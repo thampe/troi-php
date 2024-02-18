@@ -85,7 +85,6 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_deleted' => 'bool',
         'tax_rate' => 'bool',
         'id' => 'string',
-        'id' => 'string',
         'path' => 'string',
         'e_tag' => 'string',
         'is_active' => 'bool',
@@ -127,7 +126,6 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_deleted' => null,
         'tax_rate' => null,
         'id' => null,
-        'id' => null,
         'path' => null,
         'e_tag' => null,
         'is_active' => null,
@@ -166,7 +164,6 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_closed_for_time_recording' => false,
         'is_deleted' => false,
         'tax_rate' => false,
-        'id' => false,
         'id' => false,
         'path' => false,
         'e_tag' => false,
@@ -287,7 +284,6 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_deleted' => 'IsDeleted',
         'tax_rate' => 'TaxRate',
         'id' => 'id',
-        'id' => 'Id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_active' => 'IsActive',
@@ -327,7 +323,6 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_deleted' => 'setIsDeleted',
         'tax_rate' => 'setTaxRate',
         'id' => 'setId',
-        'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
         'is_active' => 'setIsActive',
@@ -366,7 +361,6 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_closed_for_time_recording' => 'getIsClosedForTimeRecording',
         'is_deleted' => 'getIsDeleted',
         'tax_rate' => 'getTaxRate',
-        'id' => 'getId',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
@@ -1241,33 +1235,6 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable tax_rate cannot be null');
         }
         $this->container['tax_rate'] = $tax_rate;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return string|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
 
         return $this;
     }

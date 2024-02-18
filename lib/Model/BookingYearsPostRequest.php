@@ -63,7 +63,6 @@ class BookingYearsPostRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'is_active' => 'bool',
         'is_current' => 'bool',
         'id' => 'int',
-        'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
         'is_deleted' => 'bool',
@@ -83,7 +82,6 @@ class BookingYearsPostRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'is_active' => null,
         'is_current' => null,
         'id' => null,
-        'id' => null,
         'path' => null,
         'e_tag' => null,
         'is_deleted' => null,
@@ -100,7 +98,6 @@ class BookingYearsPostRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'client' => false,
         'is_active' => false,
         'is_current' => false,
-        'id' => false,
         'id' => false,
         'path' => false,
         'e_tag' => false,
@@ -199,7 +196,6 @@ class BookingYearsPostRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'is_active' => 'IsActive',
         'is_current' => 'IsCurrent',
         'id' => 'id',
-        'id' => 'Id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
@@ -217,7 +213,6 @@ class BookingYearsPostRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'is_active' => 'setIsActive',
         'is_current' => 'setIsCurrent',
         'id' => 'setId',
-        'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
         'is_deleted' => 'setIsDeleted',
@@ -234,7 +229,6 @@ class BookingYearsPostRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'client' => 'getClient',
         'is_active' => 'getIsActive',
         'is_current' => 'getIsCurrent',
-        'id' => 'getId',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
@@ -463,33 +457,6 @@ class BookingYearsPostRequest implements ModelInterface, ArrayAccess, \JsonSeria
             throw new \InvalidArgumentException('non-nullable is_current cannot be null');
         }
         $this->container['is_current'] = $is_current;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
 
         return $this;
     }
