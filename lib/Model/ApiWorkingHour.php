@@ -1,6 +1,6 @@
 <?php
 /**
- * ApiEmployee
+ * ApiWorkingHour
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Troi\ObjectSerializer;
 
 /**
- * ApiEmployee Class Doc Comment
+ * ApiWorkingHour Class Doc Comment
  *
  * @category Class
  * @package  Troi
@@ -41,7 +41,7 @@ use \Troi\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
+class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ApiEmployee';
+    protected static $openAPIModelName = 'ApiWorkingHour';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,19 +58,16 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'client' => '\Troi\Model\ApiSyncItem',
-        'login_name' => 'string',
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'smtp_address' => 'string',
-        'full_name' => 'string',
-        'contact' => '\Troi\Model\ApiSyncItem',
-        'is_active' => 'bool',
-        'is_freelancer' => 'bool',
-        'is_locked' => 'bool',
-        'brand' => 'string',
-        'working_hours' => '\Troi\Model\ApiWorkingHour[]',
-        'time_zone' => 'string',
+        'from' => 'string',
+        'to' =>  'string',
+        'day1' =>  'float',
+        'day2' =>  'float',
+        'day3' =>  'float',
+        'day4' =>  'float',
+        'day5' =>  'float',
+        'day6' =>  'float',
+        'day7' =>  'float',
+        'name' => 'string',
         'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
@@ -86,23 +83,24 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'client' => null,
-        'login_name' => null,
-        'first_name' => null,
-        'last_name' => null,
-        'smtp_address' => null,
-        'full_name' => null,
-        'contact' => null,
-        'is_active' => null,
-        'is_freelancer' => null,
-        'is_locked' => null,
-        'brand' => null,
-        'working_hours' => null,
-        'time_zone' => null,
+        'from' => null,
+        'to' =>  null,
+        'day1' =>  null,
+        'day2' =>  null,
+        'day3' =>  null,
+        'day4' =>  null,
+        'day5' =>  null,
+        'day6' =>  null,
+        'day7' =>  null,
+        'id' => null,
+        'path' => null,
+        'path' => null,
+        'name' => null,
         'id' => null,
         'path' => null,
         'e_tag' => null,
         'is_deleted' => null,
+        'is_favorite' => null,
         'class_name' => null
     ];
 
@@ -112,19 +110,16 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'client' => false,
-        'login_name' => false,
-        'first_name' => false,
-        'last_name' => false,
-        'smtp_address' => false,
-        'full_name' => false,
-        'contact' => false,
-        'is_active' => false,
-        'is_freelancer' => false,
-        'is_locked' => false,
-        'brand' => false,
-        'working_hours' => false,
-        'time_zone' => false,
+        'from' => true,
+        'to' =>  true,
+        'day1' =>  true,
+        'day2' =>  true,
+        'day3' =>  true,
+        'day4' =>  true,
+        'day5' =>  true,
+        'day6' =>  true,
+        'day7' =>  true,
+        'name' => null,
         'id' => false,
         'path' => false,
         'e_tag' => false,
@@ -218,19 +213,16 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'client' => 'Client',
-        'login_name' => 'LoginName',
-        'first_name' => 'FirstName',
-        'last_name' => 'LastName',
-        'smtp_address' => 'SmtpAddress',
-        'full_name' => 'FullName',
-        'contact' => 'Contact',
-        'is_active' => 'IsActive',
-        'is_freelancer' => 'IsFreelancer',
-        'is_locked' => 'IsLocked',
-        'brand' => 'Brand',
-        'working_hours' => 'workingHours',
-        'time_zone' => 'TimeZone',
+        'from' => 'from',
+        'to' =>  'to',
+        'day1' =>  'day1',
+        'day2' =>  'day2',
+        'day3' =>  'day3',
+        'day4' =>  'day4',
+        'day5' =>  'day5',
+        'day6' =>  'day6',
+        'day7' =>  'day7',
+        'name' => 'Name',
         'id' => 'Id',
         'path' => 'Path',
         'e_tag' => 'ETag',
@@ -244,19 +236,16 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'client' => 'setClient',
-        'login_name' => 'setLoginName',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'smtp_address' => 'setSmtpAddress',
-        'full_name' => 'setFullName',
-        'contact' => 'setContact',
-        'is_active' => 'setIsActive',
-        'is_freelancer' => 'setIsFreelancer',
-        'is_locked' => 'setIsLocked',
-        'brand' => 'setBrand',
-        'working_hours' => 'setWorkingHours',
-        'time_zone' => 'setTimeZone',
+        'from' => 'setFrom',
+        'to' =>  'setTo',
+        'day1' =>  'setDay1',
+        'day2' =>  'setDay2',
+        'day3' =>  'setDay3',
+        'day4' =>  'setDay4',
+        'day5' =>  'setDay5',
+        'day6' =>  'setDay6',
+        'day7' =>  'setDay7',
+        'name' => 'setName',
         'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
@@ -270,19 +259,16 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'client' => 'getClient',
-        'login_name' => 'getLoginName',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'smtp_address' => 'getSmtpAddress',
-        'full_name' => 'getFullName',
-        'contact' => 'getContact',
-        'is_active' => 'getIsActive',
-        'is_freelancer' => 'getIsFreelancer',
-        'is_locked' => 'getIsLocked',
-        'brand' => 'getBrand',
-        'working_hours' => 'getWorkingHours',
-        'time_zone' => 'getTimeZone',
+        'from' => 'getFrom',
+        'to' =>  'getTo',
+        'day1' =>  'getDay1',
+        'day2' =>  'getDay2',
+        'day3' =>  'getDay3',
+        'day4' =>  'getDay4',
+        'day5' =>  'getDay5',
+        'day6' =>  'getDay6',
+        'day7' =>  'getDay7',
+        'name' => 'getName',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
@@ -347,19 +333,16 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('client', $data ?? [], null);
-        $this->setIfExists('login_name', $data ?? [], null);
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
-        $this->setIfExists('smtp_address', $data ?? [], null);
-        $this->setIfExists('full_name', $data ?? [], null);
-        $this->setIfExists('contact', $data ?? [], null);
-        $this->setIfExists('is_active', $data ?? [], null);
-        $this->setIfExists('is_freelancer', $data ?? [], null);
-        $this->setIfExists('is_locked', $data ?? [], null);
-        $this->setIfExists('brand', $data ?? [], null);
-        $this->setIfExists('working_hours', $data ?? [], null);
-        $this->setIfExists('time_zone', $data ?? [], null);
+        $this->setIfExists('from', $data ?? [], null);
+        $this->setIfExists('to', $data ?? [], null);
+        $this->setIfExists('day1', $data ?? [], null);
+        $this->setIfExists('day2', $data ?? [], null);
+        $this->setIfExists('day3', $data ?? [], null);
+        $this->setIfExists('day4', $data ?? [], null);
+        $this->setIfExists('day5', $data ?? [], null);
+        $this->setIfExists('day6', $data ?? [], null);
+        $this->setIfExists('day7', $data ?? [], null);
+        $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
@@ -410,352 +393,237 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets client
-     *
-     * @return \Troi\Model\ApiSyncItem|null
-     */
-    public function getClient()
-    {
-        return $this->container['client'];
-    }
-
-    /**
-     * Sets client
-     *
-     * @param \Troi\Model\ApiSyncItem|null $client client
-     *
-     * @return self
-     */
-    public function setClient($client)
-    {
-        if (is_null($client)) {
-            throw new \InvalidArgumentException('non-nullable client cannot be null');
-        }
-        $this->container['client'] = $client;
-
-        return $this;
-    }
-
-    /**
-     * Gets login_name
+     * Gets from
      *
      * @return string|null
      */
-    public function getLoginName()
+    public function getFrom()
     {
-        return $this->container['login_name'];
+        return $this->container['from'];
     }
 
     /**
-     * Sets login_name
+     * Sets from
      *
-     * @param string|null $login_name login_name
+     * @param string|null $name name
      *
      * @return self
      */
-    public function setLoginName($login_name)
+    public function setFrom($from)
     {
-        if (is_null($login_name)) {
-            throw new \InvalidArgumentException('non-nullable login_name cannot be null');
-        }
-        $this->container['login_name'] = $login_name;
+        $this->container['from'] = $from;
 
         return $this;
     }
 
     /**
-     * Gets first_name
+     * Gets to
      *
      * @return string|null
      */
-    public function getFirstName()
+    public function getTo()
     {
-        return $this->container['first_name'];
+        return $this->container['to'];
     }
 
     /**
-     * Sets first_name
+     * Sets to
      *
-     * @param string|null $first_name first_name
+     * @param string|null $name name
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setTo($to)
     {
-        if (is_null($first_name)) {
-            throw new \InvalidArgumentException('non-nullable first_name cannot be null');
-        }
-        $this->container['first_name'] = $first_name;
-
+        $this->container['to'] = $to;
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets to
      *
      * @return string|null
      */
-    public function getLastName()
+    public function getDay1()
     {
-        return $this->container['last_name'];
+        return $this->container['day1'];
     }
 
     /**
-     * Sets last_name
+     * Sets day1
      *
-     * @param string|null $last_name last_name
+     * @param string|null $day1 name
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setDay1($day1)
     {
-        if (is_null($last_name)) {
-            throw new \InvalidArgumentException('non-nullable last_name cannot be null');
-        }
-        $this->container['last_name'] = $last_name;
-
+        $this->container['day1'] = $day1;
         return $this;
     }
 
     /**
-     * Gets smtp_address
+     * Gets day2
      *
      * @return string|null
      */
-    public function getSmtpAddress()
+    public function getDay2()
     {
-        return $this->container['smtp_address'];
+        return $this->container['day2'];
     }
 
     /**
-     * Sets smtp_address
+     * Sets day2
      *
-     * @param string|null $smtp_address smtp_address
+     * @param string|null $day2 name
      *
      * @return self
      */
-    public function setSmtpAddress($smtp_address)
+    public function setDay2($day2)
     {
-        if (is_null($smtp_address)) {
-            throw new \InvalidArgumentException('non-nullable smtp_address cannot be null');
-        }
-        $this->container['smtp_address'] = $smtp_address;
-
+        $this->container['day2'] = $day2;
         return $this;
     }
 
     /**
-     * Gets full_name
+     * Gets day3
      *
      * @return string|null
      */
-    public function getFullName()
+    public function getDay3()
     {
-        return $this->container['full_name'];
+        return $this->container['day3'];
     }
 
     /**
-     * Sets full_name
+     * Sets day3
      *
-     * @param string|null $full_name full_name
+     * @param string|null $day3 name
      *
      * @return self
      */
-    public function setFullName($full_name)
+    public function setDay3($day3)
     {
-        if (is_null($full_name)) {
-            throw new \InvalidArgumentException('non-nullable full_name cannot be null');
-        }
-        $this->container['full_name'] = $full_name;
-
+        $this->container['day3'] = $day3;
         return $this;
     }
 
     /**
-     * Gets contact
-     *
-     * @return \Troi\Model\ApiSyncItem|null
-     */
-    public function getContact()
-    {
-        return $this->container['contact'];
-    }
-
-    /**
-     * Sets contact
-     *
-     * @param \Troi\Model\ApiSyncItem|null $contact contact
-     *
-     * @return self
-     */
-    public function setContact($contact)
-    {
-        if (is_null($contact)) {
-            throw new \InvalidArgumentException('non-nullable contact cannot be null');
-        }
-        $this->container['contact'] = $contact;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_active
-     *
-     * @return bool|null
-     */
-    public function getIsActive()
-    {
-        return $this->container['is_active'];
-    }
-
-    /**
-     * Sets is_active
-     *
-     * @param bool|null $is_active is_active
-     *
-     * @return self
-     */
-    public function setIsActive($is_active)
-    {
-        if (is_null($is_active)) {
-            throw new \InvalidArgumentException('non-nullable is_active cannot be null');
-        }
-        $this->container['is_active'] = $is_active;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_freelancer
-     *
-     * @return bool|null
-     */
-    public function getIsFreelancer()
-    {
-        return $this->container['is_freelancer'];
-    }
-
-    /**
-     * Sets is_freelancer
-     *
-     * @param bool|null $is_freelancer is_freelancer
-     *
-     * @return self
-     */
-    public function setIsFreelancer($is_freelancer)
-    {
-        if (is_null($is_freelancer)) {
-            throw new \InvalidArgumentException('non-nullable is_freelancer cannot be null');
-        }
-        $this->container['is_freelancer'] = $is_freelancer;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_locked
-     *
-     * @return bool|null
-     */
-    public function getIsLocked()
-    {
-        return $this->container['is_locked'];
-    }
-
-    /**
-     * Sets is_locked
-     *
-     * @param bool|null $is_locked is_locked
-     *
-     * @return self
-     */
-    public function setIsLocked($is_locked)
-    {
-        if (is_null($is_locked)) {
-            throw new \InvalidArgumentException('non-nullable is_locked cannot be null');
-        }
-        $this->container['is_locked'] = $is_locked;
-
-        return $this;
-    }
-
-    /**
-     * Gets brand
+     * Gets day4
      *
      * @return string|null
      */
-    public function getBrand()
+    public function getDay4()
     {
-        return $this->container['brand'];
+        return $this->container['day4'];
     }
 
     /**
-     * Sets brand
+     * Sets day4
      *
-     * @param string|null $brand brand
+     * @param string|null $day4 name
      *
      * @return self
      */
-    public function setBrand($brand)
+    public function setDay4($day4)
     {
-        if (is_null($brand)) {
-            throw new \InvalidArgumentException('non-nullable brand cannot be null');
-        }
-        $this->container['brand'] = $brand;
-
+        $this->container['day4'] = $day4;
         return $this;
     }
 
-    /**
-     * Gets working_hours
-     *
-     * @return \Troi\Model\ApiWorkingHour[]|null
-     */
-    public function getWorkingHours()
-    {
-        return $this->container['working_hours'];
-    }
 
     /**
-     * Sets working_hours
-     *
-     * @param \Troi\Model\ApiWorkingHour[]|null $working_hours working_hours
-     *
-     * @return self
-     */
-    public function setWorkingHours($working_hours)
-    {
-        if (is_null($working_hours)) {
-            throw new \InvalidArgumentException('non-nullable working_hours cannot be null');
-        }
-        $this->container['working_hours'] = $working_hours;
-
-        return $this;
-    }
-
-    /**
-     * Gets time_zone
+     * Gets day5
      *
      * @return string|null
      */
-    public function getTimeZone()
+    public function getDay5()
     {
-        return $this->container['time_zone'];
+        return $this->container['day5'];
     }
 
     /**
-     * Sets time_zone
+     * Sets day5
      *
-     * @param string|null $time_zone time_zone
+     * @param string|null $day5 name
      *
      * @return self
      */
-    public function setTimeZone($time_zone)
+    public function setDay5($day5)
     {
-        if (is_null($time_zone)) {
-            throw new \InvalidArgumentException('non-nullable time_zone cannot be null');
+        $this->container['day5'] = $day5;
+        return $this;
+    }
+
+    /**
+     * Gets day6
+     *
+     * @return string|null
+     */
+    public function getDay6()
+    {
+        return $this->container['day6'];
+    }
+
+    /**
+     * Sets day6
+     *
+     * @param string|null $day6 name
+     *
+     * @return self
+     */
+    public function setDay6($day6)
+    {
+        $this->container['day6'] = $day6;
+        return $this;
+    }
+
+    /**
+     * Gets day7
+     *
+     * @return string|null
+     */
+    public function getDay7()
+    {
+        return $this->container['day7'];
+    }
+
+    /**
+     * Sets day7
+     *
+     * @param string|null $day7 name
+     *
+     * @return self
+     */
+    public function setDay7($day7)
+    {
+        $this->container['day7'] = $day7;
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string|null $name name
+     *
+     * @return self
+     */
+    public function setName($name)
+    {
+        if (is_null($name)) {
+            throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
-        $this->container['time_zone'] = $time_zone;
+        $this->container['name'] = $name;
 
         return $this;
     }
