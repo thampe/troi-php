@@ -59,9 +59,6 @@ $apiInstance = new Troi\Api\AbsencesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$start = 20190401; // int | Start date
-$end = 20190401; // int | End date
-$employee_id = 33; // int | Employee id
 
 try {
     $result = $apiInstance->absencesGet($start, $end, $employee_id);
@@ -78,6 +75,10 @@ All URIs are relative to *https://demo.troi.software/api/v2/rest*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AbsenceTypesApi* | [**absenceTypesGet**](docs/Api/AbsenceTypesApi.md#absencetypesget) | **GET** /absenceTypes | Fetch all absence types
+*AbsenceTypesApi* | [**absenceTypesIdGet**](docs/Api/AbsenceTypesApi.md#absencetypesidget) | **GET** /absenceTypes/{id} | Fetch Absence Type for the given Absence Type ID
+*AbsencesApi* | [**absenceTypesIdPut**](docs/Api/AbsencesApi.md#absencetypesidput) | **PUT** /absenceTypes/{id} | Update Absence object
+*AbsencesApi* | [**absenceTypesPost**](docs/Api/AbsencesApi.md#absencetypespost) | **POST** /absenceTypes | Save Absence object
 *AbsencesApi* | [**absencesGet**](docs/Api/AbsencesApi.md#absencesget) | **GET** /absences | Fetch all absences for the current employee given Start Date and End Date
 *AbsencesApi* | [**absencesIdGet**](docs/Api/AbsencesApi.md#absencesidget) | **GET** /absences/{id} | Fetch Absence for the given Absence ID
 *AbsencesApi* | [**absencesIdPut**](docs/Api/AbsencesApi.md#absencesidput) | **PUT** /absences/{id} | Update Absence object

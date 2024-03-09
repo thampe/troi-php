@@ -286,6 +286,219 @@
         ]
       }
     },
+    "/absenceTypes": {
+      "get": {
+        "tags": [
+          "absenceTypes"
+        ],
+        "summary": "Fetch all absence types",
+        "description": "Fetch all absence types",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ApiAbsenceType"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "absences"
+        ],
+        "summary": "Save Absence object",
+        "description": "Save Absence object",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "required": [
+                      "Start",
+                      "End",
+                      "absenceType",
+                      "Employee"
+                    ]
+                  },
+                  {
+                    "$ref": "#/components/schemas/ApiAbsence"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ApiSyncItem"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      }
+    },
+    "/absenceTypes/{id}": {
+      "get": {
+        "tags": [
+          "absenceTypes"
+        ],
+        "summary": "Fetch Absence Type for the given Absence Type ID",
+        "description": "Fetch Absence Type for the given Absence Type ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Absence Type id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiAbsenceType"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "absences"
+        ],
+        "summary": "Update Absence object",
+        "description": "Update Absence object",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Absence id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "required": [
+                      "Start",
+                      "End",
+                      "absenceType",
+                      "Employee",
+                      "id",
+                      "Path"
+                    ]
+                  },
+                  {
+                    "$ref": "#/components/schemas/ApiAbsence"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ApiSyncItem"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ]
+      }
+    },
     "/accountGroups": {
       "get": {
         "tags": [

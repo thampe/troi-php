@@ -3,6 +3,7 @@
 .travis.yml
 README.md
 composer.json
+docs/Api/AbsenceTypesApi.md
 docs/Api/AbsencesApi.md
 docs/Api/AccountGroupsApi.md
 docs/Api/AccountingEntriesApi.md
@@ -85,6 +86,7 @@ docs/Model/ProjectsPostRequest.md
 docs/Model/SuppliersIdPutRequest.md
 docs/Model/SuppliersPostRequest.md
 git_push.sh
+lib/Api/AbsenceTypesApi.php
 lib/Api/AbsencesApi.php
 lib/Api/AccountGroupsApi.php
 lib/Api/AccountingEntriesApi.php
@@ -172,3 +174,4 @@ lib/Model/SuppliersIdPutRequest.php
 lib/Model/SuppliersPostRequest.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Api/AbsenceTypesApiTest.php
