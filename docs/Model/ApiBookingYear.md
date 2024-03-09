@@ -5,10 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **year** | **int** |  | [optional]
-**client** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
+**client** | [**\Troi\Model\ApiClient**](ApiClient.md) |  | [optional]
 **is_active** | **bool** |  | [optional]
 **is_current** | **bool** |  | [optional]
-**id** | **int** |  | [optional]
 **id** | **int** |  | [optional]
 **path** | **string** |  | [optional]
 **e_tag** | **string** |  | [optional]

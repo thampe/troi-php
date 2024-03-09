@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**calendar_event** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  |
-**employee** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  |
+**calendar_event** | [**\Troi\Model\ApiCalendarEvent**](ApiCalendarEvent.md) |  |
+**employee** | [**\Troi\Model\ApiEmployee**](ApiEmployee.md) |  |
 **is_read_only** | **bool** |  | [optional]
 **acceptance_state** | **string** | &#x60;A&#x60; &#x3D; calendar event acceptance state accepted &#x60;D&#x60; &#x3D; calendar event acceptance state declined &#x60;U&#x60; &#x3D; calendar event acceptance state unknown | [optional]
 **id** | **string** |  | [optional]

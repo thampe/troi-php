@@ -58,13 +58,13 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'client' => '\Troi\Model\ApiSyncItem',
+        'client' => '\Troi\Model\ApiClient',
         'login_name' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
         'smtp_address' => 'string',
         'full_name' => 'string',
-        'contact' => '\Troi\Model\ApiSyncItem',
+        'contact' => '\Troi\Model\ApiContact',
         'is_active' => 'bool',
         'is_freelancer' => 'bool',
         'is_locked' => 'bool',
@@ -412,7 +412,7 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets client
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiClient|null
      */
     public function getClient()
     {
@@ -422,7 +422,7 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets client
      *
-     * @param \Troi\Model\ApiSyncItem|null $client client
+     * @param \Troi\Model\ApiClient|null $client client
      *
      * @return self
      */
@@ -574,7 +574,7 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets contact
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiContact|null
      */
     public function getContact()
     {
@@ -584,7 +584,7 @@ class ApiEmployee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contact
      *
-     * @param \Troi\Model\ApiSyncItem|null $contact contact
+     * @param \Troi\Model\ApiContact|null $contact contact
      *
      * @return self
      */

@@ -13,7 +13,7 @@ All URIs are relative to https://demo.troi.software/api/v2/rest, except if the o
 ## `suppliersGet()`
 
 ```php
-suppliersGet($client_id, $return_api_sync_items, $search, $is_active, $show_reference_details): object[]
+suppliersGet($client_id, $return_api_sync_items, $search, $is_active, $show_reference_details): \Troi\Model\ApiSupplier[]
 ```
 
 Fetch all suppliers from given client
@@ -65,7 +65,7 @@ try {
 
 ### Return type
 
-**object[]**
+[**\Troi\Model\ApiSupplier[]**](../Model/ApiSupplier.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ try {
 ## `suppliersIdGet()`
 
 ```php
-suppliersIdGet($id): object
+suppliersIdGet($id): \Troi\Model\ApiSupplier
 ```
 
 Fetch supplier for the given supplier ID
@@ -127,7 +127,7 @@ try {
 
 ### Return type
 
-**object**
+[**\Troi\Model\ApiSupplier**](../Model/ApiSupplier.md)
 
 ### Authorization
 
@@ -209,7 +209,7 @@ try {
 ## `suppliersPost()`
 
 ```php
-suppliersPost($unknown_base_type): \Troi\Model\ApiSyncItem[]
+suppliersPost($suppliers_post_request): \Troi\Model\ApiSyncItem[]
 ```
 
 Save supplier
@@ -235,10 +235,10 @@ $apiInstance = new Troi\Api\SuppliersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$unknown_base_type = new \Troi\Model\UNKNOWN_BASE_TYPE(); // \Troi\Model\UNKNOWN_BASE_TYPE
+$suppliers_post_request = new \Troi\Model\SuppliersPostRequest(); // \Troi\Model\SuppliersPostRequest
 
 try {
-    $result = $apiInstance->suppliersPost($unknown_base_type);
+    $result = $apiInstance->suppliersPost($suppliers_post_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SuppliersApi->suppliersPost: ', $e->getMessage(), PHP_EOL;
@@ -249,7 +249,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **unknown_base_type** | [**\Troi\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)|  | |
+| **suppliers_post_request** | [**\Troi\Model\SuppliersPostRequest**](../Model/SuppliersPostRequest.md)|  | |
 
 ### Return type
 

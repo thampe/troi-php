@@ -17,7 +17,6 @@ Name | Type | Description | Notes
 **ree_date** | **object** |  | [optional]
 **ree_service_id** | **int** |  | [optional]
 **id** | **int** |  | [optional]
-**id** | **int** |  | [optional]
 **path** | **string** |  | [optional]
 **e_tag** | **int** |  | [optional]
 **is_deleted** | **bool** |  | [optional]

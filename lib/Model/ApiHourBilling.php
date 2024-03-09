@@ -59,9 +59,9 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'client' => '\Troi\Model\ApiHourBillingClient',
-        'calculation_position' => '\Troi\Model\ApiHourBillingClient',
-        'service' => '\Troi\Model\ApiSyncItem',
-        'employee' => '\Troi\Model\ApiHourBillingClient',
+        'calculation_position' => '\Troi\Model\ApiHourBillingCalculationPosition',
+        'service' => '\Troi\Model\ApiService',
+        'employee' => '\Troi\Model\ApiHourBillingEmployee',
         'date' => 'string',
         'quantity' => 'float',
         'remark' => 'string',
@@ -347,7 +347,6 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('is_invoiced', $data ?? [], null);
         $this->setIfExists('is_approved', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -426,7 +425,7 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets calculation_position
      *
-     * @return \Troi\Model\ApiHourBillingClient|null
+     * @return \Troi\Model\ApiHourBillingCalculationPosition|null
      */
     public function getCalculationPosition()
     {
@@ -436,7 +435,7 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets calculation_position
      *
-     * @param \Troi\Model\ApiHourBillingClient|null $calculation_position calculation_position
+     * @param \Troi\Model\ApiHourBillingCalculationPosition|null $calculation_position calculation_position
      *
      * @return self
      */
@@ -453,7 +452,7 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets service
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiService|null
      */
     public function getService()
     {
@@ -463,7 +462,7 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets service
      *
-     * @param \Troi\Model\ApiSyncItem|null $service service
+     * @param \Troi\Model\ApiService|null $service service
      *
      * @return self
      */
@@ -480,7 +479,7 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets employee
      *
-     * @return \Troi\Model\ApiHourBillingClient|null
+     * @return \Troi\Model\ApiHourBillingEmployee|null
      */
     public function getEmployee()
     {
@@ -490,7 +489,7 @@ class ApiHourBilling implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets employee
      *
-     * @param \Troi\Model\ApiHourBillingClient|null $employee employee
+     * @param \Troi\Model\ApiHourBillingEmployee|null $employee employee
      *
      * @return self
      */

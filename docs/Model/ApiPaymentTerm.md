@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **discount_days4** | **string** |  | [optional]
 **discount_rate4** | **string** |  | [optional]
 **id** | **int** |  | [optional]
-**id** | **int** |  | [optional]
 **path** | **string** |  | [optional]
 **e_tag** | **string** |  | [optional]
 **is_deleted** | **bool** |  | [optional]

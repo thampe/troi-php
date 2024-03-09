@@ -59,8 +59,8 @@ class ApiContactCategory implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'category' => '\Troi\Model\ApiSyncItem[]',
-        'contact' => '\Troi\Model\ApiSyncItem[]',
+        'category' => '\Troi\Model\ApiListItem[]',
+        'contact' => '\Troi\Model\ApiContact[]',
         'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
@@ -369,7 +369,7 @@ class ApiContactCategory implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets category
      *
-     * @return \Troi\Model\ApiSyncItem[]|null
+     * @return \Troi\Model\ApiListItem[]|null
      */
     public function getCategory()
     {
@@ -379,7 +379,7 @@ class ApiContactCategory implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets category
      *
-     * @param \Troi\Model\ApiSyncItem[]|null $category category
+     * @param \Troi\Model\ApiListItem[]|null $category category
      *
      * @return self
      */
@@ -396,7 +396,7 @@ class ApiContactCategory implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets contact
      *
-     * @return \Troi\Model\ApiSyncItem[]|null
+     * @return \Troi\Model\ApiContact[]|null
      */
     public function getContact()
     {
@@ -406,7 +406,7 @@ class ApiContactCategory implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets contact
      *
-     * @param \Troi\Model\ApiSyncItem[]|null $contact contact
+     * @param \Troi\Model\ApiContact[]|null $contact contact
      *
      * @return self
      */

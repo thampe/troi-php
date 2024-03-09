@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **name** | **string** |  | [optional]
 **number** | **string** |  | [optional]
 **is_active** | **bool** |  | [optional]
-**contact** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
+**contact** | [**\Troi\Model\ApiContact**](ApiContact.md) |  | [optional]
 **datev_account_number_length** | **int** |  | [optional]
 **datev_consultant_number** | **int** |  | [optional]
 **datev_client_number** | **int** |  | [optional]

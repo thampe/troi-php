@@ -354,7 +354,6 @@ class ApiSyncItem implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('ree_date', $data ?? [], null);
         $this->setIfExists('ree_service_id', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);

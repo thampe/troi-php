@@ -59,7 +59,7 @@ class ApiBookingYear implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'year' => 'int',
-        'client' => '\Troi\Model\ApiSyncItem',
+        'client' => '\Troi\Model\ApiClient',
         'is_active' => 'bool',
         'is_current' => 'bool',
         'id' => 'int',
@@ -298,7 +298,6 @@ class ApiBookingYear implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('is_active', $data ?? [], null);
         $this->setIfExists('is_current', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -377,7 +376,7 @@ class ApiBookingYear implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets client
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiClient|null
      */
     public function getClient()
     {
@@ -387,7 +386,7 @@ class ApiBookingYear implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets client
      *
-     * @param \Troi\Model\ApiSyncItem|null $client client
+     * @param \Troi\Model\ApiClient|null $client client
      *
      * @return self
      */

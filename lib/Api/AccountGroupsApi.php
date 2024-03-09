@@ -520,7 +520,7 @@ class AccountGroupsApi
     /**
      * Operation accountGroupsIdDelete
      *
-     * Delete Account Groups
+     * Delete Absence Groups
      *
      * @param  int $id Account Group id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountGroupsIdDelete'] to see the possible values for this operation
@@ -538,7 +538,7 @@ class AccountGroupsApi
     /**
      * Operation accountGroupsIdDeleteWithHttpInfo
      *
-     * Delete Account Groups
+     * Delete Absence Groups
      *
      * @param  int $id Account Group id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountGroupsIdDelete'] to see the possible values for this operation
@@ -767,7 +767,7 @@ class AccountGroupsApi
     /**
      * Operation accountGroupsIdDeleteAsync
      *
-     * Delete Account Groups
+     * Delete Absence Groups
      *
      * @param  int $id Account Group id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountGroupsIdDelete'] to see the possible values for this operation
@@ -788,7 +788,7 @@ class AccountGroupsApi
     /**
      * Operation accountGroupsIdDeleteAsyncWithHttpInfo
      *
-     * Delete Account Groups
+     * Delete Absence Groups
      *
      * @param  int $id Account Group id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountGroupsIdDelete'] to see the possible values for this operation

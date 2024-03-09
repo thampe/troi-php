@@ -59,7 +59,7 @@ class BookingYearsPostRequest implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'year' => 'int',
-        'client' => '\Troi\Model\ApiSyncItem',
+        'client' => '\Troi\Model\ApiClient',
         'is_active' => 'bool',
         'is_current' => 'bool',
         'id' => 'int',
@@ -298,7 +298,6 @@ class BookingYearsPostRequest implements ModelInterface, ArrayAccess, \JsonSeria
         $this->setIfExists('is_active', $data ?? [], null);
         $this->setIfExists('is_current', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -383,7 +382,7 @@ class BookingYearsPostRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets client
      *
-     * @return \Troi\Model\ApiSyncItem
+     * @return \Troi\Model\ApiClient
      */
     public function getClient()
     {
@@ -393,7 +392,7 @@ class BookingYearsPostRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets client
      *
-     * @param \Troi\Model\ApiSyncItem $client client
+     * @param \Troi\Model\ApiClient $client client
      *
      * @return self
      */

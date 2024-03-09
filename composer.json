@@ -1,6 +1,6 @@
 {
     "name": "thampe/troi-sdk",
-    "description": "This is the official API documentation of Troi.  # Authentication  Troi offers basic auth for authentication.  <security-definitions />",
+    "description": "Troi API Implementation in PHP",
     "keywords": [
         "openapitools",
         "openapi-generator",

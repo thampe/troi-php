@@ -62,9 +62,9 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'name' => 'string',
         'external_description' => 'string',
         'internal_description' => 'string',
-        'project' => '\Troi\Model\ApiSyncItem',
-        'subproject' => '\Troi\Model\ApiSyncItem',
-        'customer' => '\Troi\Model\ApiSyncItem',
+        'project' => '\Troi\Model\ApiProject',
+        'subproject' => '\Troi\Model\ApiSubproject',
+        'customer' => '\Troi\Model\ApiCustomer',
         'is_external_service' => 'bool',
         'is_service_needed' => 'bool',
         'display_path' => 'string',
@@ -72,7 +72,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'sale_price' => 'float',
         'purchase_price' => 'float',
         'total_calculation' => 'float',
-        'unit' => '\Troi\Model\ApiSyncItem',
+        'unit' => '\Troi\Model\ApiUnit',
         'service' => '\Troi\Model\ApiService',
         'is_billable' => 'bool',
         'is_optional' => 'bool',
@@ -518,7 +518,6 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         $this->setIfExists('service_source', $data ?? [], null);
         $this->setIfExists('tax_rate', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -682,7 +681,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets project
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiProject|null
      */
     public function getProject()
     {
@@ -692,7 +691,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets project
      *
-     * @param \Troi\Model\ApiSyncItem|null $project project
+     * @param \Troi\Model\ApiProject|null $project project
      *
      * @return self
      */
@@ -709,7 +708,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets subproject
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiSubproject|null
      */
     public function getSubproject()
     {
@@ -719,7 +718,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets subproject
      *
-     * @param \Troi\Model\ApiSyncItem|null $subproject subproject
+     * @param \Troi\Model\ApiSubproject|null $subproject subproject
      *
      * @return self
      */
@@ -736,7 +735,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets customer
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiCustomer|null
      */
     public function getCustomer()
     {
@@ -746,7 +745,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets customer
      *
-     * @param \Troi\Model\ApiSyncItem|null $customer customer
+     * @param \Troi\Model\ApiCustomer|null $customer customer
      *
      * @return self
      */
@@ -952,7 +951,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets unit
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiUnit|null
      */
     public function getUnit()
     {
@@ -962,7 +961,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets unit
      *
-     * @param \Troi\Model\ApiSyncItem|null $unit unit
+     * @param \Troi\Model\ApiUnit|null $unit unit
      *
      * @return self
      */

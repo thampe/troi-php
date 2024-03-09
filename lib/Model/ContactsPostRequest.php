@@ -64,7 +64,7 @@ class ContactsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'name1' => 'string',
         'name2' => 'string',
         'name3' => 'string',
-        'categories' => '\Troi\Model\ApiSyncItem[]',
+        'categories' => '\Troi\Model\ApiContactCategory[]',
         'title' => 'string',
         'private_fax' => 'string',
         'private_mail' => 'string',
@@ -94,14 +94,14 @@ class ContactsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'company_address_street' => 'string',
         'company_address_zip_code' => 'string',
         'remark' => 'string',
-        'parent' => '\Troi\Model\ApiSyncItem',
+        'parent' => '\Troi\Model\ApiContact',
         'employee' => '\Troi\Model\ApiEmployee',
-        'department' => '\Troi\Model\ApiSyncItem',
+        'department' => '\Troi\Model\ApiContact',
         'is_favorite' => 'bool',
         'is_inactive' => 'bool',
         'external_id' => 'string',
         'access_group' => 'int',
-        'created_by' => '\Troi\Model\ApiSyncItem',
+        'created_by' => '\Troi\Model\ApiEmployee',
         'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
@@ -833,7 +833,7 @@ class ContactsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets categories
      *
-     * @return \Troi\Model\ApiSyncItem[]|null
+     * @return \Troi\Model\ApiContactCategory[]|null
      */
     public function getCategories()
     {
@@ -843,7 +843,7 @@ class ContactsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets categories
      *
-     * @param \Troi\Model\ApiSyncItem[]|null $categories categories
+     * @param \Troi\Model\ApiContactCategory[]|null $categories categories
      *
      * @return self
      */
@@ -1643,7 +1643,7 @@ class ContactsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets parent
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiContact|null
      */
     public function getParent()
     {
@@ -1653,7 +1653,7 @@ class ContactsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets parent
      *
-     * @param \Troi\Model\ApiSyncItem|null $parent parent
+     * @param \Troi\Model\ApiContact|null $parent parent
      *
      * @return self
      */
@@ -1697,7 +1697,7 @@ class ContactsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets department
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiContact|null
      */
     public function getDepartment()
     {
@@ -1707,7 +1707,7 @@ class ContactsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets department
      *
-     * @param \Troi\Model\ApiSyncItem|null $department department
+     * @param \Troi\Model\ApiContact|null $department department
      *
      * @return self
      */
@@ -1832,7 +1832,7 @@ class ContactsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets created_by
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiEmployee|null
      */
     public function getCreatedBy()
     {
@@ -1842,7 +1842,7 @@ class ContactsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets created_by
      *
-     * @param \Troi\Model\ApiSyncItem|null $created_by created_by
+     * @param \Troi\Model\ApiEmployee|null $created_by created_by
      *
      * @return self
      */

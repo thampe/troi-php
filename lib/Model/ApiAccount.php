@@ -60,16 +60,16 @@ class ApiAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'name' => 'string',
         'number' => 'int',
-        'client' => '\Troi\Model\ApiSyncItem',
-        'default_contra_account' => '\Troi\Model\ApiSyncItem',
-        'summary_account' => '\Troi\Model\ApiSyncItem',
+        'client' => '\Troi\Model\ApiClient',
+        'default_contra_account' => '\Troi\Model\ApiAccount',
+        'summary_account' => '\Troi\Model\ApiAccount',
         'is_active' => 'bool',
         'is_cash_desk_account' => 'bool',
         'is_bank_account' => 'bool',
         'is_automatic_account' => 'bool',
         'is_locked_for_datev' => 'bool',
         'tax_rate' => '\Troi\Model\ApiSyncItem',
-        'account_group' => '\Troi\Model\ApiSyncItem',
+        'account_group' => '\Troi\Model\ApiAccountGroup',
         'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
@@ -354,7 +354,6 @@ class ApiAccount implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('tax_rate', $data ?? [], null);
         $this->setIfExists('account_group', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -460,7 +459,7 @@ class ApiAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets client
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiClient|null
      */
     public function getClient()
     {
@@ -470,7 +469,7 @@ class ApiAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets client
      *
-     * @param \Troi\Model\ApiSyncItem|null $client client
+     * @param \Troi\Model\ApiClient|null $client client
      *
      * @return self
      */
@@ -487,7 +486,7 @@ class ApiAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets default_contra_account
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiAccount|null
      */
     public function getDefaultContraAccount()
     {
@@ -497,7 +496,7 @@ class ApiAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets default_contra_account
      *
-     * @param \Troi\Model\ApiSyncItem|null $default_contra_account default_contra_account
+     * @param \Troi\Model\ApiAccount|null $default_contra_account default_contra_account
      *
      * @return self
      */
@@ -514,7 +513,7 @@ class ApiAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets summary_account
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiAccount|null
      */
     public function getSummaryAccount()
     {
@@ -524,7 +523,7 @@ class ApiAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets summary_account
      *
-     * @param \Troi\Model\ApiSyncItem|null $summary_account summary_account
+     * @param \Troi\Model\ApiAccount|null $summary_account summary_account
      *
      * @return self
      */
@@ -703,7 +702,7 @@ class ApiAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets account_group
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiAccountGroup|null
      */
     public function getAccountGroup()
     {
@@ -713,7 +712,7 @@ class ApiAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets account_group
      *
-     * @param \Troi\Model\ApiSyncItem|null $account_group account_group
+     * @param \Troi\Model\ApiAccountGroup|null $account_group account_group
      *
      * @return self
      */

@@ -63,7 +63,7 @@ class ApiAbsence implements ModelInterface, ArrayAccess, \JsonSerializable
         'subject' => 'string',
         'description' => 'string',
         'destination' => 'object',
-        'employee' => '\Troi\Model\ApiSyncItem',
+        'employee' => '\Troi\Model\ApiEmployee',
         'absence_type' => '\Troi\Model\ApiAbsenceType',
         'half_day' => 'int',
         'absence_unit' => 'int',
@@ -340,7 +340,6 @@ class ApiAbsence implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('absence_unit', $data ?? [], null);
         $this->setIfExists('absence_hours', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -527,7 +526,7 @@ class ApiAbsence implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets employee
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiEmployee|null
      */
     public function getEmployee()
     {
@@ -537,7 +536,7 @@ class ApiAbsence implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets employee
      *
-     * @param \Troi\Model\ApiSyncItem|null $employee employee
+     * @param \Troi\Model\ApiEmployee|null $employee employee
      *
      * @return self
      */

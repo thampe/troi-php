@@ -58,8 +58,8 @@ class CalendarEventParticipantsPostRequest implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'calendar_event' => '\Troi\Model\ApiSyncItem',
-        'employee' => '\Troi\Model\ApiSyncItem',
+        'calendar_event' => '\Troi\Model\ApiCalendarEvent',
+        'employee' => '\Troi\Model\ApiEmployee',
         'is_read_only' => 'bool',
         'acceptance_state' => 'string',
         'id' => 'string',
@@ -381,7 +381,7 @@ class CalendarEventParticipantsPostRequest implements ModelInterface, ArrayAcces
     /**
      * Gets calendar_event
      *
-     * @return \Troi\Model\ApiSyncItem
+     * @return \Troi\Model\ApiCalendarEvent
      */
     public function getCalendarEvent()
     {
@@ -391,7 +391,7 @@ class CalendarEventParticipantsPostRequest implements ModelInterface, ArrayAcces
     /**
      * Sets calendar_event
      *
-     * @param \Troi\Model\ApiSyncItem $calendar_event calendar_event
+     * @param \Troi\Model\ApiCalendarEvent $calendar_event calendar_event
      *
      * @return self
      */
@@ -408,7 +408,7 @@ class CalendarEventParticipantsPostRequest implements ModelInterface, ArrayAcces
     /**
      * Gets employee
      *
-     * @return \Troi\Model\ApiSyncItem
+     * @return \Troi\Model\ApiEmployee
      */
     public function getEmployee()
     {
@@ -418,7 +418,7 @@ class CalendarEventParticipantsPostRequest implements ModelInterface, ArrayAcces
     /**
      * Sets employee
      *
-     * @param \Troi\Model\ApiSyncItem $employee employee
+     * @param \Troi\Model\ApiEmployee $employee employee
      *
      * @return self
      */

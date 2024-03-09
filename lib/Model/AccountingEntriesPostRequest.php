@@ -58,12 +58,12 @@ class AccountingEntriesPostRequest implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'client' => '\Troi\Model\ApiSyncItem',
+        'client' => '\Troi\Model\ApiClient',
         'cost_center' => '\Troi\Model\ApiSyncItem',
         'cost_center1' => '\Troi\Model\ApiSyncItem',
         'cost_center2' => '\Troi\Model\ApiSyncItem',
         'amount' => 'int',
-        'account' => '\Troi\Model\ApiSyncItem',
+        'account' => '\Troi\Model\ApiAccount',
         'contra_account' => '\Troi\Model\ApiSyncItem',
         'accounting_entry_collection' => 'object',
         'document_date' => 'string',
@@ -445,7 +445,6 @@ class AccountingEntriesPostRequest implements ModelInterface, ArrayAccess, \Json
         $this->setIfExists('payment_term', $data ?? [], null);
         $this->setIfExists('project_number', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -518,7 +517,7 @@ class AccountingEntriesPostRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets client
      *
-     * @return \Troi\Model\ApiSyncItem
+     * @return \Troi\Model\ApiClient
      */
     public function getClient()
     {
@@ -528,7 +527,7 @@ class AccountingEntriesPostRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets client
      *
-     * @param \Troi\Model\ApiSyncItem $client client
+     * @param \Troi\Model\ApiClient $client client
      *
      * @return self
      */
@@ -653,7 +652,7 @@ class AccountingEntriesPostRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets account
      *
-     * @return \Troi\Model\ApiSyncItem
+     * @return \Troi\Model\ApiAccount
      */
     public function getAccount()
     {
@@ -663,7 +662,7 @@ class AccountingEntriesPostRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets account
      *
-     * @param \Troi\Model\ApiSyncItem $account account
+     * @param \Troi\Model\ApiAccount $account account
      *
      * @return self
      */
@@ -1216,7 +1215,6 @@ class AccountingEntriesPostRequest implements ModelInterface, ArrayAccess, \Json
 
         return $this;
     }
-
 
     /**
      * Gets path

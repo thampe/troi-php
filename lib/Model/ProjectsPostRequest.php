@@ -60,8 +60,8 @@ class ProjectsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'name' => 'string',
         'number' => 'string',
-        'client' => '\Troi\Model\ApiSyncItem',
-        'customer' => '\Troi\Model\ApiSyncItem',
+        'client' => '\Troi\Model\ApiClient',
+        'customer' => '\Troi\Model\ApiCustomer',
         'external_description' => 'string',
         'internal_description' => 'string',
         'status' => '\Troi\Model\ApiProjectStatus',
@@ -69,14 +69,14 @@ class ProjectsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'is_approved' => 'bool',
         'is_blocked' => 'bool',
         'blocked_by' => '\Troi\Model\ApiSyncItem',
-        'leader' => '\Troi\Model\ApiSyncItem',
+        'leader' => '\Troi\Model\ApiEmployee',
         'team' => '\Troi\Model\ApiSyncItem',
         'type_id' => 'int',
         'tax_rate_id' => 'int',
         'project_folder_id' => 'int',
         'foreign_services_cp_ip' => 'int',
         'project_types' => '\Troi\Model\ApiProjectType[]',
-        'contact' => '\Troi\Model\ApiSyncItem',
+        'contact' => '\Troi\Model\ApiContact',
         'invoice_recipient_id' => 'int',
         'invoice_recipient_person_id' => 'int',
         'reporting_date' => 'string',
@@ -594,7 +594,7 @@ class ProjectsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets client
      *
-     * @return \Troi\Model\ApiSyncItem
+     * @return \Troi\Model\ApiClient
      */
     public function getClient()
     {
@@ -604,7 +604,7 @@ class ProjectsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets client
      *
-     * @param \Troi\Model\ApiSyncItem $client client
+     * @param \Troi\Model\ApiClient $client client
      *
      * @return self
      */
@@ -621,7 +621,7 @@ class ProjectsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets customer
      *
-     * @return \Troi\Model\ApiSyncItem
+     * @return \Troi\Model\ApiCustomer
      */
     public function getCustomer()
     {
@@ -631,7 +631,7 @@ class ProjectsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets customer
      *
-     * @param \Troi\Model\ApiSyncItem $customer customer
+     * @param \Troi\Model\ApiCustomer $customer customer
      *
      * @return self
      */
@@ -837,7 +837,7 @@ class ProjectsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets leader
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiEmployee|null
      */
     public function getLeader()
     {
@@ -847,7 +847,7 @@ class ProjectsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets leader
      *
-     * @param \Troi\Model\ApiSyncItem|null $leader leader
+     * @param \Troi\Model\ApiEmployee|null $leader leader
      *
      * @return self
      */
@@ -1026,7 +1026,7 @@ class ProjectsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets contact
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiContact|null
      */
     public function getContact()
     {
@@ -1036,7 +1036,7 @@ class ProjectsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets contact
      *
-     * @param \Troi\Model\ApiSyncItem|null $contact contact
+     * @param \Troi\Model\ApiContact|null $contact contact
      *
      * @return self
      */

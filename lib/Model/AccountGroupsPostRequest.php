@@ -291,7 +291,6 @@ class AccountGroupsPostRequest implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('client', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);

@@ -58,12 +58,12 @@ class AccountingEntriesIdPutRequest implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'client' => '\Troi\Model\ApiSyncItem',
+        'client' => '\Troi\Model\ApiClient',
         'cost_center' => '\Troi\Model\ApiSyncItem',
         'cost_center1' => '\Troi\Model\ApiSyncItem',
         'cost_center2' => '\Troi\Model\ApiSyncItem',
         'amount' => 'int',
-        'account' => '\Troi\Model\ApiSyncItem',
+        'account' => '\Troi\Model\ApiAccount',
         'contra_account' => '\Troi\Model\ApiSyncItem',
         'accounting_entry_collection' => 'object',
         'document_date' => 'string',
@@ -279,7 +279,7 @@ class AccountingEntriesIdPutRequest implements ModelInterface, ArrayAccess, \Jso
         'parent_id' => 'ParentId',
         'payment_term' => 'PaymentTerm',
         'project_number' => 'ProjectNumber',
-        'id' => 'Id',
+        'id' => 'id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
@@ -445,7 +445,6 @@ class AccountingEntriesIdPutRequest implements ModelInterface, ArrayAccess, \Jso
         $this->setIfExists('payment_term', $data ?? [], null);
         $this->setIfExists('project_number', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -503,9 +502,6 @@ class AccountingEntriesIdPutRequest implements ModelInterface, ArrayAccess, \Jso
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
         if ($this->container['path'] === null) {
             $invalidProperties[] = "'path' can't be null";
         }
@@ -527,7 +523,7 @@ class AccountingEntriesIdPutRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets client
      *
-     * @return \Troi\Model\ApiSyncItem
+     * @return \Troi\Model\ApiClient
      */
     public function getClient()
     {
@@ -537,7 +533,7 @@ class AccountingEntriesIdPutRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets client
      *
-     * @param \Troi\Model\ApiSyncItem $client client
+     * @param \Troi\Model\ApiClient $client client
      *
      * @return self
      */
@@ -662,7 +658,7 @@ class AccountingEntriesIdPutRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets account
      *
-     * @return \Troi\Model\ApiSyncItem
+     * @return \Troi\Model\ApiAccount
      */
     public function getAccount()
     {
@@ -672,7 +668,7 @@ class AccountingEntriesIdPutRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets account
      *
-     * @param \Troi\Model\ApiSyncItem $account account
+     * @param \Troi\Model\ApiAccount $account account
      *
      * @return self
      */
@@ -1225,8 +1221,6 @@ class AccountingEntriesIdPutRequest implements ModelInterface, ArrayAccess, \Jso
 
         return $this;
     }
-
-
 
     /**
      * Gets path

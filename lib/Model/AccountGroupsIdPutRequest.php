@@ -291,7 +291,6 @@ class AccountGroupsIdPutRequest implements ModelInterface, ArrayAccess, \JsonSer
         $this->setIfExists('client', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -330,9 +329,6 @@ class AccountGroupsIdPutRequest implements ModelInterface, ArrayAccess, \JsonSer
         }
         if ($this->container['client'] === null) {
             $invalidProperties[] = "'client' can't be null";
-        }
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";

@@ -60,16 +60,16 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'name' => 'string',
         'number' => 'int',
-        'client' => '\Troi\Model\ApiSyncItem',
-        'default_contra_account' => '\Troi\Model\ApiSyncItem',
-        'summary_account' => '\Troi\Model\ApiSyncItem',
+        'client' => '\Troi\Model\ApiClient',
+        'default_contra_account' => '\Troi\Model\ApiAccount',
+        'summary_account' => '\Troi\Model\ApiAccount',
         'is_active' => 'bool',
         'is_cash_desk_account' => 'bool',
         'is_bank_account' => 'bool',
         'is_automatic_account' => 'bool',
         'is_locked_for_datev' => 'bool',
         'tax_rate' => '\Troi\Model\ApiSyncItem',
-        'account_group' => '\Troi\Model\ApiSyncItem',
+        'account_group' => '\Troi\Model\ApiAccountGroup',
         'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
@@ -354,7 +354,6 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->setIfExists('tax_rate', $data ?? [], null);
         $this->setIfExists('account_group', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -472,7 +471,7 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets client
      *
-     * @return \Troi\Model\ApiSyncItem
+     * @return \Troi\Model\ApiClient
      */
     public function getClient()
     {
@@ -482,7 +481,7 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets client
      *
-     * @param \Troi\Model\ApiSyncItem $client client
+     * @param \Troi\Model\ApiClient $client client
      *
      * @return self
      */
@@ -499,7 +498,7 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets default_contra_account
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiAccount|null
      */
     public function getDefaultContraAccount()
     {
@@ -509,7 +508,7 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets default_contra_account
      *
-     * @param \Troi\Model\ApiSyncItem|null $default_contra_account default_contra_account
+     * @param \Troi\Model\ApiAccount|null $default_contra_account default_contra_account
      *
      * @return self
      */
@@ -526,7 +525,7 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets summary_account
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiAccount|null
      */
     public function getSummaryAccount()
     {
@@ -536,7 +535,7 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets summary_account
      *
-     * @param \Troi\Model\ApiSyncItem|null $summary_account summary_account
+     * @param \Troi\Model\ApiAccount|null $summary_account summary_account
      *
      * @return self
      */
@@ -715,7 +714,7 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets account_group
      *
-     * @return \Troi\Model\ApiSyncItem
+     * @return \Troi\Model\ApiAccountGroup
      */
     public function getAccountGroup()
     {
@@ -725,7 +724,7 @@ class AccountsPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets account_group
      *
-     * @param \Troi\Model\ApiSyncItem $account_group account_group
+     * @param \Troi\Model\ApiAccountGroup $account_group account_group
      *
      * @return self
      */

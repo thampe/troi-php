@@ -59,19 +59,21 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'from' => 'string',
-        'to' =>  'string',
-        'day1' =>  'float',
-        'day2' =>  'float',
-        'day3' =>  'float',
-        'day4' =>  'float',
-        'day5' =>  'float',
-        'day6' =>  'float',
-        'day7' =>  'float',
-        'name' => 'string',
+        'to' => 'string',
+        'day1' => 'float',
+        'day2' => 'float',
+        'day3' => 'float',
+        'day4' => 'float',
+        'day5' => 'float',
+        'day6' => 'float',
+        'day7' => 'float',
         'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
         'is_deleted' => 'bool',
+        'name' => 'string',
+        'is_favorite' => 'bool',
+        'parent_path' => 'string',
         'class_name' => 'string'
     ];
 
@@ -84,23 +86,21 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'from' => null,
-        'to' =>  null,
-        'day1' =>  null,
-        'day2' =>  null,
-        'day3' =>  null,
-        'day4' =>  null,
-        'day5' =>  null,
-        'day6' =>  null,
-        'day7' =>  null,
-        'id' => null,
-        'path' => null,
-        'path' => null,
-        'name' => null,
+        'to' => null,
+        'day1' => null,
+        'day2' => null,
+        'day3' => null,
+        'day4' => null,
+        'day5' => null,
+        'day6' => null,
+        'day7' => null,
         'id' => null,
         'path' => null,
         'e_tag' => null,
         'is_deleted' => null,
+        'name' => null,
         'is_favorite' => null,
+        'parent_path' => null,
         'class_name' => null
     ];
 
@@ -110,20 +110,22 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'from' => true,
-        'to' =>  true,
-        'day1' =>  true,
-        'day2' =>  true,
-        'day3' =>  true,
-        'day4' =>  true,
-        'day5' =>  true,
-        'day6' =>  true,
-        'day7' =>  true,
-        'name' => null,
+        'from' => false,
+        'to' => false,
+        'day1' => false,
+        'day2' => false,
+        'day3' => false,
+        'day4' => false,
+        'day5' => false,
+        'day6' => false,
+        'day7' => false,
         'id' => false,
         'path' => false,
         'e_tag' => false,
         'is_deleted' => false,
+        'name' => false,
+        'is_favorite' => false,
+        'parent_path' => false,
         'class_name' => false
     ];
 
@@ -214,19 +216,21 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'from' => 'from',
-        'to' =>  'to',
-        'day1' =>  'day1',
-        'day2' =>  'day2',
-        'day3' =>  'day3',
-        'day4' =>  'day4',
-        'day5' =>  'day5',
-        'day6' =>  'day6',
-        'day7' =>  'day7',
-        'name' => 'Name',
-        'id' => 'Id',
+        'to' => 'to',
+        'day1' => 'day1',
+        'day2' => 'day2',
+        'day3' => 'day3',
+        'day4' => 'day4',
+        'day5' => 'day5',
+        'day6' => 'day6',
+        'day7' => 'day7',
+        'id' => 'id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
+        'name' => 'Name',
+        'is_favorite' => 'IsFavorite',
+        'parent_path' => 'ParentPath',
         'class_name' => 'ClassName'
     ];
 
@@ -237,19 +241,21 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'from' => 'setFrom',
-        'to' =>  'setTo',
-        'day1' =>  'setDay1',
-        'day2' =>  'setDay2',
-        'day3' =>  'setDay3',
-        'day4' =>  'setDay4',
-        'day5' =>  'setDay5',
-        'day6' =>  'setDay6',
-        'day7' =>  'setDay7',
-        'name' => 'setName',
+        'to' => 'setTo',
+        'day1' => 'setDay1',
+        'day2' => 'setDay2',
+        'day3' => 'setDay3',
+        'day4' => 'setDay4',
+        'day5' => 'setDay5',
+        'day6' => 'setDay6',
+        'day7' => 'setDay7',
         'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
         'is_deleted' => 'setIsDeleted',
+        'name' => 'setName',
+        'is_favorite' => 'setIsFavorite',
+        'parent_path' => 'setParentPath',
         'class_name' => 'setClassName'
     ];
 
@@ -260,19 +266,21 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'from' => 'getFrom',
-        'to' =>  'getTo',
-        'day1' =>  'getDay1',
-        'day2' =>  'getDay2',
-        'day3' =>  'getDay3',
-        'day4' =>  'getDay4',
-        'day5' =>  'getDay5',
-        'day6' =>  'getDay6',
-        'day7' =>  'getDay7',
-        'name' => 'getName',
+        'to' => 'getTo',
+        'day1' => 'getDay1',
+        'day2' => 'getDay2',
+        'day3' => 'getDay3',
+        'day4' => 'getDay4',
+        'day5' => 'getDay5',
+        'day6' => 'getDay6',
+        'day7' => 'getDay7',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
         'is_deleted' => 'getIsDeleted',
+        'name' => 'getName',
+        'is_favorite' => 'getIsFavorite',
+        'parent_path' => 'getParentPath',
         'class_name' => 'getClassName'
     ];
 
@@ -342,11 +350,13 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('day5', $data ?? [], null);
         $this->setIfExists('day6', $data ?? [], null);
         $this->setIfExists('day7', $data ?? [], null);
-        $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
+        $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('is_favorite', $data ?? [], null);
+        $this->setIfExists('parent_path', $data ?? [], null);
         $this->setIfExists('class_name', $data ?? [], null);
     }
 
@@ -405,12 +415,15 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets from
      *
-     * @param string|null $name name
+     * @param string|null $from from
      *
      * @return self
      */
     public function setFrom($from)
     {
+        if (is_null($from)) {
+            throw new \InvalidArgumentException('non-nullable from cannot be null');
+        }
         $this->container['from'] = $from;
 
         return $this;
@@ -429,20 +442,24 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets to
      *
-     * @param string|null $name name
+     * @param string|null $to to
      *
      * @return self
      */
     public function setTo($to)
     {
+        if (is_null($to)) {
+            throw new \InvalidArgumentException('non-nullable to cannot be null');
+        }
         $this->container['to'] = $to;
+
         return $this;
     }
 
     /**
-     * Gets to
+     * Gets day1
      *
-     * @return string|null
+     * @return float|null
      */
     public function getDay1()
     {
@@ -452,20 +469,24 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets day1
      *
-     * @param string|null $day1 name
+     * @param float|null $day1 day1
      *
      * @return self
      */
     public function setDay1($day1)
     {
+        if (is_null($day1)) {
+            throw new \InvalidArgumentException('non-nullable day1 cannot be null');
+        }
         $this->container['day1'] = $day1;
+
         return $this;
     }
 
     /**
      * Gets day2
      *
-     * @return string|null
+     * @return float|null
      */
     public function getDay2()
     {
@@ -475,20 +496,24 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets day2
      *
-     * @param string|null $day2 name
+     * @param float|null $day2 day2
      *
      * @return self
      */
     public function setDay2($day2)
     {
+        if (is_null($day2)) {
+            throw new \InvalidArgumentException('non-nullable day2 cannot be null');
+        }
         $this->container['day2'] = $day2;
+
         return $this;
     }
 
     /**
      * Gets day3
      *
-     * @return string|null
+     * @return float|null
      */
     public function getDay3()
     {
@@ -498,20 +523,24 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets day3
      *
-     * @param string|null $day3 name
+     * @param float|null $day3 day3
      *
      * @return self
      */
     public function setDay3($day3)
     {
+        if (is_null($day3)) {
+            throw new \InvalidArgumentException('non-nullable day3 cannot be null');
+        }
         $this->container['day3'] = $day3;
+
         return $this;
     }
 
     /**
      * Gets day4
      *
-     * @return string|null
+     * @return float|null
      */
     public function getDay4()
     {
@@ -521,21 +550,24 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets day4
      *
-     * @param string|null $day4 name
+     * @param float|null $day4 day4
      *
      * @return self
      */
     public function setDay4($day4)
     {
+        if (is_null($day4)) {
+            throw new \InvalidArgumentException('non-nullable day4 cannot be null');
+        }
         $this->container['day4'] = $day4;
+
         return $this;
     }
-
 
     /**
      * Gets day5
      *
-     * @return string|null
+     * @return float|null
      */
     public function getDay5()
     {
@@ -545,20 +577,24 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets day5
      *
-     * @param string|null $day5 name
+     * @param float|null $day5 day5
      *
      * @return self
      */
     public function setDay5($day5)
     {
+        if (is_null($day5)) {
+            throw new \InvalidArgumentException('non-nullable day5 cannot be null');
+        }
         $this->container['day5'] = $day5;
+
         return $this;
     }
 
     /**
      * Gets day6
      *
-     * @return string|null
+     * @return float|null
      */
     public function getDay6()
     {
@@ -568,20 +604,24 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets day6
      *
-     * @param string|null $day6 name
+     * @param float|null $day6 day6
      *
      * @return self
      */
     public function setDay6($day6)
     {
+        if (is_null($day6)) {
+            throw new \InvalidArgumentException('non-nullable day6 cannot be null');
+        }
         $this->container['day6'] = $day6;
+
         return $this;
     }
 
     /**
      * Gets day7
      *
-     * @return string|null
+     * @return float|null
      */
     public function getDay7()
     {
@@ -591,39 +631,16 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets day7
      *
-     * @param string|null $day7 name
+     * @param float|null $day7 day7
      *
      * @return self
      */
     public function setDay7($day7)
     {
-        $this->container['day7'] = $day7;
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string|null $name name
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        if (is_null($day7)) {
+            throw new \InvalidArgumentException('non-nullable day7 cannot be null');
         }
-        $this->container['name'] = $name;
+        $this->container['day7'] = $day7;
 
         return $this;
     }
@@ -732,6 +749,87 @@ class ApiWorkingHour implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable is_deleted cannot be null');
         }
         $this->container['is_deleted'] = $is_deleted;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string|null $name name
+     *
+     * @return self
+     */
+    public function setName($name)
+    {
+        if (is_null($name)) {
+            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        }
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_favorite
+     *
+     * @return bool|null
+     */
+    public function getIsFavorite()
+    {
+        return $this->container['is_favorite'];
+    }
+
+    /**
+     * Sets is_favorite
+     *
+     * @param bool|null $is_favorite is_favorite
+     *
+     * @return self
+     */
+    public function setIsFavorite($is_favorite)
+    {
+        if (is_null($is_favorite)) {
+            throw new \InvalidArgumentException('non-nullable is_favorite cannot be null');
+        }
+        $this->container['is_favorite'] = $is_favorite;
+
+        return $this;
+    }
+
+    /**
+     * Gets parent_path
+     *
+     * @return string|null
+     */
+    public function getParentPath()
+    {
+        return $this->container['parent_path'];
+    }
+
+    /**
+     * Sets parent_path
+     *
+     * @param string|null $parent_path parent_path
+     *
+     * @return self
+     */
+    public function setParentPath($parent_path)
+    {
+        if (is_null($parent_path)) {
+            throw new \InvalidArgumentException('non-nullable parent_path cannot be null');
+        }
+        $this->container['parent_path'] = $parent_path;
 
         return $this;
     }

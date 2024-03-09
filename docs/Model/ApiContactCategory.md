@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | [optional]
-**category** | [**\Troi\Model\ApiSyncItem[]**](ApiSyncItem.md) |  | [optional]
-**contact** | [**\Troi\Model\ApiSyncItem[]**](ApiSyncItem.md) |  | [optional]
+**category** | [**\Troi\Model\ApiListItem[]**](ApiListItem.md) |  | [optional]
+**contact** | [**\Troi\Model\ApiContact[]**](ApiContact.md) |  | [optional]
 **id** | **int** |  | [optional]
 **path** | **string** |  | [optional]
 **e_tag** | **string** |  | [optional]

@@ -59,9 +59,9 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'client' => '\Troi\Model\ApiSyncItem',
-        'customer' => '\Troi\Model\ApiSyncItem',
-        'project' => '\Troi\Model\ApiSyncItem',
+        'client' => '\Troi\Model\ApiClient',
+        'customer' => '\Troi\Model\ApiCustomer',
+        'project' => '\Troi\Model\ApiProject',
         'description' => 'string',
         'internal_description' => 'string',
         'root_id' => 'int',
@@ -69,7 +69,7 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
         'purchase_price' => 'float',
         'sale_price' => 'float',
         'account_id' => 'int',
-        'account' => '\Troi\Model\ApiSyncItem',
+        'account' => '\Troi\Model\ApiAccount',
         'cost_center_id' => 'int',
         'service_fee_id' => 'int',
         'item_number' => 'int',
@@ -469,7 +469,6 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('is_deleted', $data ?? [], null);
         $this->setIfExists('tax_rate', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_active', $data ?? [], null);
@@ -557,7 +556,7 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets client
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiClient|null
      */
     public function getClient()
     {
@@ -567,7 +566,7 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets client
      *
-     * @param \Troi\Model\ApiSyncItem|null $client client
+     * @param \Troi\Model\ApiClient|null $client client
      *
      * @return self
      */
@@ -584,7 +583,7 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets customer
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiCustomer|null
      */
     public function getCustomer()
     {
@@ -594,7 +593,7 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets customer
      *
-     * @param \Troi\Model\ApiSyncItem|null $customer customer
+     * @param \Troi\Model\ApiCustomer|null $customer customer
      *
      * @return self
      */
@@ -611,7 +610,7 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets project
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiProject|null
      */
     public function getProject()
     {
@@ -621,7 +620,7 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets project
      *
-     * @param \Troi\Model\ApiSyncItem|null $project project
+     * @param \Troi\Model\ApiProject|null $project project
      *
      * @return self
      */
@@ -827,7 +826,7 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets account
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiAccount|null
      */
     public function getAccount()
     {
@@ -837,7 +836,7 @@ class ApiService implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets account
      *
-     * @param \Troi\Model\ApiSyncItem|null $account account
+     * @param \Troi\Model\ApiAccount|null $account account
      *
      * @return self
      */

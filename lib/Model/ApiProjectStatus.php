@@ -50,7 +50,7 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ApiProject_Status';
+    protected static $openAPIModelName = 'ApiProjectStatus';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,27 +58,15 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
         'name' => 'string',
-        'is_favorite' => 'bool',
-        'is_printable' => 'bool',
-        'parent_path' => 'string',
-        'ree_employee_id' => 'int',
-        'ree_cp_id' => 'int',
-        'ree_sub_project_id' => 'int',
-        'ree_project_id' => 'int',
-        'ree_quantity' => 'int',
-        'ree_date' => 'object',
-        'ree_service_id' => 'int',
-        'id' => 'int',
-        'path' => 'string',
-        'e_tag' => 'int',
-        'is_deleted' => 'bool',
-        'class_name' => 'string',
         'is_default' => 'bool',
         'is_blocked_for_time_recording' => 'bool',
         'is_blocked_for_bookkeeping' => 'bool',
-        'is_visible_in_dropdown' => 'bool'
+        'is_visible_in_dropdown' => 'bool',
+        'id' => 'int',
+        'path' => 'string',
+        'is_deleted' => 'bool',
+        'class_name' => 'string'
     ];
 
     /**
@@ -89,27 +77,15 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null,
         'name' => null,
-        'is_favorite' => null,
-        'is_printable' => null,
-        'parent_path' => null,
-        'ree_employee_id' => null,
-        'ree_cp_id' => null,
-        'ree_sub_project_id' => null,
-        'ree_project_id' => null,
-        'ree_quantity' => null,
-        'ree_date' => null,
-        'ree_service_id' => null,
-        'id' => null,
-        'path' => null,
-        'e_tag' => null,
-        'is_deleted' => null,
-        'class_name' => null,
         'is_default' => null,
         'is_blocked_for_time_recording' => null,
         'is_blocked_for_bookkeeping' => null,
-        'is_visible_in_dropdown' => null
+        'is_visible_in_dropdown' => null,
+        'id' => null,
+        'path' => null,
+        'is_deleted' => null,
+        'class_name' => null
     ];
 
     /**
@@ -118,27 +94,15 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'type' => false,
         'name' => false,
-        'is_favorite' => false,
-        'is_printable' => false,
-        'parent_path' => false,
-        'ree_employee_id' => false,
-        'ree_cp_id' => false,
-        'ree_sub_project_id' => false,
-        'ree_project_id' => false,
-        'ree_quantity' => false,
-        'ree_date' => false,
-        'ree_service_id' => false,
-        'id' => false,
-        'path' => false,
-        'e_tag' => false,
-        'is_deleted' => false,
-        'class_name' => false,
         'is_default' => false,
         'is_blocked_for_time_recording' => false,
         'is_blocked_for_bookkeeping' => false,
-        'is_visible_in_dropdown' => false
+        'is_visible_in_dropdown' => false,
+        'id' => false,
+        'path' => false,
+        'is_deleted' => false,
+        'class_name' => false
     ];
 
     /**
@@ -227,27 +191,15 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'Type',
         'name' => 'Name',
-        'is_favorite' => 'IsFavorite',
-        'is_printable' => 'IsPrintable',
-        'parent_path' => 'ParentPath',
-        'ree_employee_id' => 'ReeEmployeeId',
-        'ree_cp_id' => 'ReeCpId',
-        'ree_sub_project_id' => 'ReeSubProjectId',
-        'ree_project_id' => 'ReeProjectId',
-        'ree_quantity' => 'ReeQuantity',
-        'ree_date' => 'ReeDate',
-        'ree_service_id' => 'ReeServiceId',
-        'id' => 'id',
-        'path' => 'Path',
-        'e_tag' => 'ETag',
-        'is_deleted' => 'IsDeleted',
-        'class_name' => 'ClassName',
         'is_default' => 'IsDefault',
         'is_blocked_for_time_recording' => 'IsBlockedForTimeRecording',
         'is_blocked_for_bookkeeping' => 'IsBlockedForBookkeeping',
-        'is_visible_in_dropdown' => 'IsVisibleInDropdown'
+        'is_visible_in_dropdown' => 'IsVisibleInDropdown',
+        'id' => 'Id',
+        'path' => 'Path',
+        'is_deleted' => 'IsDeleted',
+        'class_name' => 'ClassName'
     ];
 
     /**
@@ -256,27 +208,15 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
         'name' => 'setName',
-        'is_favorite' => 'setIsFavorite',
-        'is_printable' => 'setIsPrintable',
-        'parent_path' => 'setParentPath',
-        'ree_employee_id' => 'setReeEmployeeId',
-        'ree_cp_id' => 'setReeCpId',
-        'ree_sub_project_id' => 'setReeSubProjectId',
-        'ree_project_id' => 'setReeProjectId',
-        'ree_quantity' => 'setReeQuantity',
-        'ree_date' => 'setReeDate',
-        'ree_service_id' => 'setReeServiceId',
-        'id' => 'setId',
-        'path' => 'setPath',
-        'e_tag' => 'setETag',
-        'is_deleted' => 'setIsDeleted',
-        'class_name' => 'setClassName',
         'is_default' => 'setIsDefault',
         'is_blocked_for_time_recording' => 'setIsBlockedForTimeRecording',
         'is_blocked_for_bookkeeping' => 'setIsBlockedForBookkeeping',
-        'is_visible_in_dropdown' => 'setIsVisibleInDropdown'
+        'is_visible_in_dropdown' => 'setIsVisibleInDropdown',
+        'id' => 'setId',
+        'path' => 'setPath',
+        'is_deleted' => 'setIsDeleted',
+        'class_name' => 'setClassName'
     ];
 
     /**
@@ -285,27 +225,15 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
         'name' => 'getName',
-        'is_favorite' => 'getIsFavorite',
-        'is_printable' => 'getIsPrintable',
-        'parent_path' => 'getParentPath',
-        'ree_employee_id' => 'getReeEmployeeId',
-        'ree_cp_id' => 'getReeCpId',
-        'ree_sub_project_id' => 'getReeSubProjectId',
-        'ree_project_id' => 'getReeProjectId',
-        'ree_quantity' => 'getReeQuantity',
-        'ree_date' => 'getReeDate',
-        'ree_service_id' => 'getReeServiceId',
-        'id' => 'getId',
-        'path' => 'getPath',
-        'e_tag' => 'getETag',
-        'is_deleted' => 'getIsDeleted',
-        'class_name' => 'getClassName',
         'is_default' => 'getIsDefault',
         'is_blocked_for_time_recording' => 'getIsBlockedForTimeRecording',
         'is_blocked_for_bookkeeping' => 'getIsBlockedForBookkeeping',
-        'is_visible_in_dropdown' => 'getIsVisibleInDropdown'
+        'is_visible_in_dropdown' => 'getIsVisibleInDropdown',
+        'id' => 'getId',
+        'path' => 'getPath',
+        'is_deleted' => 'getIsDeleted',
+        'class_name' => 'getClassName'
     ];
 
     /**
@@ -365,28 +293,15 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('is_favorite', $data ?? [], null);
-        $this->setIfExists('is_printable', $data ?? [], null);
-        $this->setIfExists('parent_path', $data ?? [], null);
-        $this->setIfExists('ree_employee_id', $data ?? [], null);
-        $this->setIfExists('ree_cp_id', $data ?? [], null);
-        $this->setIfExists('ree_sub_project_id', $data ?? [], null);
-        $this->setIfExists('ree_project_id', $data ?? [], null);
-        $this->setIfExists('ree_quantity', $data ?? [], null);
-        $this->setIfExists('ree_date', $data ?? [], null);
-        $this->setIfExists('ree_service_id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('path', $data ?? [], null);
-        $this->setIfExists('e_tag', $data ?? [], null);
-        $this->setIfExists('is_deleted', $data ?? [], null);
-        $this->setIfExists('class_name', $data ?? [], null);
         $this->setIfExists('is_default', $data ?? [], null);
         $this->setIfExists('is_blocked_for_time_recording', $data ?? [], null);
         $this->setIfExists('is_blocked_for_bookkeeping', $data ?? [], null);
         $this->setIfExists('is_visible_in_dropdown', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('path', $data ?? [], null);
+        $this->setIfExists('is_deleted', $data ?? [], null);
+        $this->setIfExists('class_name', $data ?? [], null);
     }
 
     /**
@@ -432,33 +347,6 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets type
-     *
-     * @return string|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string|null $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
      * Gets name
      *
      * @return string|null
@@ -481,411 +369,6 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_favorite
-     *
-     * @return bool|null
-     */
-    public function getIsFavorite()
-    {
-        return $this->container['is_favorite'];
-    }
-
-    /**
-     * Sets is_favorite
-     *
-     * @param bool|null $is_favorite is_favorite
-     *
-     * @return self
-     */
-    public function setIsFavorite($is_favorite)
-    {
-        if (is_null($is_favorite)) {
-            throw new \InvalidArgumentException('non-nullable is_favorite cannot be null');
-        }
-        $this->container['is_favorite'] = $is_favorite;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_printable
-     *
-     * @return bool|null
-     */
-    public function getIsPrintable()
-    {
-        return $this->container['is_printable'];
-    }
-
-    /**
-     * Sets is_printable
-     *
-     * @param bool|null $is_printable is_printable
-     *
-     * @return self
-     */
-    public function setIsPrintable($is_printable)
-    {
-        if (is_null($is_printable)) {
-            throw new \InvalidArgumentException('non-nullable is_printable cannot be null');
-        }
-        $this->container['is_printable'] = $is_printable;
-
-        return $this;
-    }
-
-    /**
-     * Gets parent_path
-     *
-     * @return string|null
-     */
-    public function getParentPath()
-    {
-        return $this->container['parent_path'];
-    }
-
-    /**
-     * Sets parent_path
-     *
-     * @param string|null $parent_path parent_path
-     *
-     * @return self
-     */
-    public function setParentPath($parent_path)
-    {
-        if (is_null($parent_path)) {
-            throw new \InvalidArgumentException('non-nullable parent_path cannot be null');
-        }
-        $this->container['parent_path'] = $parent_path;
-
-        return $this;
-    }
-
-    /**
-     * Gets ree_employee_id
-     *
-     * @return int|null
-     */
-    public function getReeEmployeeId()
-    {
-        return $this->container['ree_employee_id'];
-    }
-
-    /**
-     * Sets ree_employee_id
-     *
-     * @param int|null $ree_employee_id ree_employee_id
-     *
-     * @return self
-     */
-    public function setReeEmployeeId($ree_employee_id)
-    {
-        if (is_null($ree_employee_id)) {
-            throw new \InvalidArgumentException('non-nullable ree_employee_id cannot be null');
-        }
-        $this->container['ree_employee_id'] = $ree_employee_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets ree_cp_id
-     *
-     * @return int|null
-     */
-    public function getReeCpId()
-    {
-        return $this->container['ree_cp_id'];
-    }
-
-    /**
-     * Sets ree_cp_id
-     *
-     * @param int|null $ree_cp_id ree_cp_id
-     *
-     * @return self
-     */
-    public function setReeCpId($ree_cp_id)
-    {
-        if (is_null($ree_cp_id)) {
-            throw new \InvalidArgumentException('non-nullable ree_cp_id cannot be null');
-        }
-        $this->container['ree_cp_id'] = $ree_cp_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets ree_sub_project_id
-     *
-     * @return int|null
-     */
-    public function getReeSubProjectId()
-    {
-        return $this->container['ree_sub_project_id'];
-    }
-
-    /**
-     * Sets ree_sub_project_id
-     *
-     * @param int|null $ree_sub_project_id ree_sub_project_id
-     *
-     * @return self
-     */
-    public function setReeSubProjectId($ree_sub_project_id)
-    {
-        if (is_null($ree_sub_project_id)) {
-            throw new \InvalidArgumentException('non-nullable ree_sub_project_id cannot be null');
-        }
-        $this->container['ree_sub_project_id'] = $ree_sub_project_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets ree_project_id
-     *
-     * @return int|null
-     */
-    public function getReeProjectId()
-    {
-        return $this->container['ree_project_id'];
-    }
-
-    /**
-     * Sets ree_project_id
-     *
-     * @param int|null $ree_project_id ree_project_id
-     *
-     * @return self
-     */
-    public function setReeProjectId($ree_project_id)
-    {
-        if (is_null($ree_project_id)) {
-            throw new \InvalidArgumentException('non-nullable ree_project_id cannot be null');
-        }
-        $this->container['ree_project_id'] = $ree_project_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets ree_quantity
-     *
-     * @return int|null
-     */
-    public function getReeQuantity()
-    {
-        return $this->container['ree_quantity'];
-    }
-
-    /**
-     * Sets ree_quantity
-     *
-     * @param int|null $ree_quantity ree_quantity
-     *
-     * @return self
-     */
-    public function setReeQuantity($ree_quantity)
-    {
-        if (is_null($ree_quantity)) {
-            throw new \InvalidArgumentException('non-nullable ree_quantity cannot be null');
-        }
-        $this->container['ree_quantity'] = $ree_quantity;
-
-        return $this;
-    }
-
-    /**
-     * Gets ree_date
-     *
-     * @return object|null
-     */
-    public function getReeDate()
-    {
-        return $this->container['ree_date'];
-    }
-
-    /**
-     * Sets ree_date
-     *
-     * @param object|null $ree_date ree_date
-     *
-     * @return self
-     */
-    public function setReeDate($ree_date)
-    {
-        if (is_null($ree_date)) {
-            throw new \InvalidArgumentException('non-nullable ree_date cannot be null');
-        }
-        $this->container['ree_date'] = $ree_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets ree_service_id
-     *
-     * @return int|null
-     */
-    public function getReeServiceId()
-    {
-        return $this->container['ree_service_id'];
-    }
-
-    /**
-     * Sets ree_service_id
-     *
-     * @param int|null $ree_service_id ree_service_id
-     *
-     * @return self
-     */
-    public function setReeServiceId($ree_service_id)
-    {
-        if (is_null($ree_service_id)) {
-            throw new \InvalidArgumentException('non-nullable ree_service_id cannot be null');
-        }
-        $this->container['ree_service_id'] = $ree_service_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets path
-     *
-     * @return string|null
-     */
-    public function getPath()
-    {
-        return $this->container['path'];
-    }
-
-    /**
-     * Sets path
-     *
-     * @param string|null $path path
-     *
-     * @return self
-     */
-    public function setPath($path)
-    {
-        if (is_null($path)) {
-            throw new \InvalidArgumentException('non-nullable path cannot be null');
-        }
-        $this->container['path'] = $path;
-
-        return $this;
-    }
-
-    /**
-     * Gets e_tag
-     *
-     * @return int|null
-     */
-    public function getETag()
-    {
-        return $this->container['e_tag'];
-    }
-
-    /**
-     * Sets e_tag
-     *
-     * @param int|null $e_tag e_tag
-     *
-     * @return self
-     */
-    public function setETag($e_tag)
-    {
-        if (is_null($e_tag)) {
-            throw new \InvalidArgumentException('non-nullable e_tag cannot be null');
-        }
-        $this->container['e_tag'] = $e_tag;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_deleted
-     *
-     * @return bool|null
-     */
-    public function getIsDeleted()
-    {
-        return $this->container['is_deleted'];
-    }
-
-    /**
-     * Sets is_deleted
-     *
-     * @param bool|null $is_deleted is_deleted
-     *
-     * @return self
-     */
-    public function setIsDeleted($is_deleted)
-    {
-        if (is_null($is_deleted)) {
-            throw new \InvalidArgumentException('non-nullable is_deleted cannot be null');
-        }
-        $this->container['is_deleted'] = $is_deleted;
-
-        return $this;
-    }
-
-    /**
-     * Gets class_name
-     *
-     * @return string|null
-     */
-    public function getClassName()
-    {
-        return $this->container['class_name'];
-    }
-
-    /**
-     * Sets class_name
-     *
-     * @param string|null $class_name class_name
-     *
-     * @return self
-     */
-    public function setClassName($class_name)
-    {
-        if (is_null($class_name)) {
-            throw new \InvalidArgumentException('non-nullable class_name cannot be null');
-        }
-        $this->container['class_name'] = $class_name;
 
         return $this;
     }
@@ -994,6 +477,114 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable is_visible_in_dropdown cannot be null');
         }
         $this->container['is_visible_in_dropdown'] = $is_visible_in_dropdown;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return int|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param int|null $id id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets path
+     *
+     * @return string|null
+     */
+    public function getPath()
+    {
+        return $this->container['path'];
+    }
+
+    /**
+     * Sets path
+     *
+     * @param string|null $path path
+     *
+     * @return self
+     */
+    public function setPath($path)
+    {
+        if (is_null($path)) {
+            throw new \InvalidArgumentException('non-nullable path cannot be null');
+        }
+        $this->container['path'] = $path;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_deleted
+     *
+     * @return bool|null
+     */
+    public function getIsDeleted()
+    {
+        return $this->container['is_deleted'];
+    }
+
+    /**
+     * Sets is_deleted
+     *
+     * @param bool|null $is_deleted is_deleted
+     *
+     * @return self
+     */
+    public function setIsDeleted($is_deleted)
+    {
+        if (is_null($is_deleted)) {
+            throw new \InvalidArgumentException('non-nullable is_deleted cannot be null');
+        }
+        $this->container['is_deleted'] = $is_deleted;
+
+        return $this;
+    }
+
+    /**
+     * Gets class_name
+     *
+     * @return string|null
+     */
+    public function getClassName()
+    {
+        return $this->container['class_name'];
+    }
+
+    /**
+     * Sets class_name
+     *
+     * @param string|null $class_name class_name
+     *
+     * @return self
+     */
+    public function setClassName($class_name)
+    {
+        if (is_null($class_name)) {
+            throw new \InvalidArgumentException('non-nullable class_name cannot be null');
+        }
+        $this->container['class_name'] = $class_name;
 
         return $this;
     }

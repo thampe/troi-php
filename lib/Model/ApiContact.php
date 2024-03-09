@@ -64,7 +64,7 @@ class ApiContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'name1' => 'string',
         'name2' => 'string',
         'name3' => 'string',
-        'categories' => '\Troi\Model\ApiSyncItem[]',
+        'categories' => '\Troi\Model\ApiContactCategory[]',
         'title' => 'string',
         'private_fax' => 'string',
         'private_mail' => 'string',
@@ -94,14 +94,14 @@ class ApiContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'company_address_street' => 'string',
         'company_address_zip_code' => 'string',
         'remark' => 'string',
-        'parent' => '\Troi\Model\ApiSyncItem',
+        'parent' => '\Troi\Model\ApiContact',
         'employee' => '\Troi\Model\ApiEmployee',
-        'department' => '\Troi\Model\ApiSyncItem',
+        'department' => '\Troi\Model\ApiContact',
         'is_favorite' => 'bool',
         'is_inactive' => 'bool',
         'external_id' => 'string',
         'access_group' => 'int',
-        'created_by' => '\Troi\Model\ApiSyncItem',
+        'created_by' => '\Troi\Model\ApiEmployee',
         'id' => 'int',
         'path' => 'string',
         'e_tag' => 'string',
@@ -827,7 +827,7 @@ class ApiContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets categories
      *
-     * @return \Troi\Model\ApiSyncItem[]|null
+     * @return \Troi\Model\ApiContactCategory[]|null
      */
     public function getCategories()
     {
@@ -837,7 +837,7 @@ class ApiContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets categories
      *
-     * @param \Troi\Model\ApiSyncItem[]|null $categories categories
+     * @param \Troi\Model\ApiContactCategory[]|null $categories categories
      *
      * @return self
      */
@@ -1637,7 +1637,7 @@ class ApiContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets parent
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiContact|null
      */
     public function getParent()
     {
@@ -1647,7 +1647,7 @@ class ApiContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets parent
      *
-     * @param \Troi\Model\ApiSyncItem|null $parent parent
+     * @param \Troi\Model\ApiContact|null $parent parent
      *
      * @return self
      */
@@ -1691,7 +1691,7 @@ class ApiContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets department
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiContact|null
      */
     public function getDepartment()
     {
@@ -1701,7 +1701,7 @@ class ApiContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets department
      *
-     * @param \Troi\Model\ApiSyncItem|null $department department
+     * @param \Troi\Model\ApiContact|null $department department
      *
      * @return self
      */
@@ -1826,7 +1826,7 @@ class ApiContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets created_by
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiEmployee|null
      */
     public function getCreatedBy()
     {
@@ -1836,7 +1836,7 @@ class ApiContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_by
      *
-     * @param \Troi\Model\ApiSyncItem|null $created_by created_by
+     * @param \Troi\Model\ApiEmployee|null $created_by created_by
      *
      * @return self
      */

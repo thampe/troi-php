@@ -4,22 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  | [optional]
 **name** | **string** |  | [optional]
-**is_favorite** | **bool** |  | [optional]
-**is_printable** | **bool** |  | [optional]
-**parent_path** | **string** |  | [optional]
-**ree_employee_id** | **int** |  | [optional]
-**ree_cp_id** | **int** |  | [optional]
-**ree_sub_project_id** | **int** |  | [optional]
-**ree_project_id** | **int** |  | [optional]
-**ree_quantity** | **int** |  | [optional]
-**ree_date** | **object** |  | [optional]
-**ree_service_id** | **int** |  | [optional]
-**id** | **int** |  | [optional]
-**id** | **int** |  | [optional]
-**path** | **string** |  |
-**e_tag** | **int** |  | [optional]
+**number** | **string** |  | [optional]
+**is_active** | **bool** |  | [optional]
+**contact** | [**\Troi\Model\ApiContact**](ApiContact.md) |  | [optional]
+**datev_account_number_length** | **int** |  | [optional]
+**datev_consultant_number** | **int** |  | [optional]
+**datev_client_number** | **int** |  | [optional]
+**id** | **string** |  | [optional]
+**path** | **string** | /clients/1 |
+**e_tag** | **string** |  | [optional]
 **is_deleted** | **bool** |  | [optional]
 **class_name** | **string** |  | [optional]
 

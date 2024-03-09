@@ -58,21 +58,16 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
         'name' => 'string',
-        'is_favorite' => 'bool',
-        'is_printable' => 'bool',
-        'parent_path' => 'string',
-        'ree_employee_id' => 'int',
-        'ree_cp_id' => 'int',
-        'ree_sub_project_id' => 'int',
-        'ree_project_id' => 'int',
-        'ree_quantity' => 'int',
-        'ree_date' => 'object',
-        'ree_service_id' => 'int',
-        'id' => 'int',
+        'number' => 'string',
+        'is_active' => 'bool',
+        'contact' => '\Troi\Model\ApiContact',
+        'datev_account_number_length' => 'int',
+        'datev_consultant_number' => 'int',
+        'datev_client_number' => 'int',
+        'id' => 'string',
         'path' => 'string',
-        'e_tag' => 'int',
+        'e_tag' => 'string',
         'is_deleted' => 'bool',
         'class_name' => 'string'
     ];
@@ -85,18 +80,13 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null,
         'name' => null,
-        'is_favorite' => null,
-        'is_printable' => null,
-        'parent_path' => null,
-        'ree_employee_id' => null,
-        'ree_cp_id' => null,
-        'ree_sub_project_id' => null,
-        'ree_project_id' => null,
-        'ree_quantity' => null,
-        'ree_date' => null,
-        'ree_service_id' => null,
+        'number' => null,
+        'is_active' => null,
+        'contact' => null,
+        'datev_account_number_length' => null,
+        'datev_consultant_number' => null,
+        'datev_client_number' => null,
         'id' => null,
         'path' => null,
         'e_tag' => null,
@@ -110,18 +100,13 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'type' => false,
         'name' => false,
-        'is_favorite' => false,
-        'is_printable' => false,
-        'parent_path' => false,
-        'ree_employee_id' => false,
-        'ree_cp_id' => false,
-        'ree_sub_project_id' => false,
-        'ree_project_id' => false,
-        'ree_quantity' => false,
-        'ree_date' => false,
-        'ree_service_id' => false,
+        'number' => false,
+        'is_active' => false,
+        'contact' => false,
+        'datev_account_number_length' => false,
+        'datev_consultant_number' => false,
+        'datev_client_number' => false,
         'id' => false,
         'path' => false,
         'e_tag' => false,
@@ -215,19 +200,14 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'Type',
         'name' => 'Name',
-        'is_favorite' => 'IsFavorite',
-        'is_printable' => 'IsPrintable',
-        'parent_path' => 'ParentPath',
-        'ree_employee_id' => 'ReeEmployeeId',
-        'ree_cp_id' => 'ReeCpId',
-        'ree_sub_project_id' => 'ReeSubProjectId',
-        'ree_project_id' => 'ReeProjectId',
-        'ree_quantity' => 'ReeQuantity',
-        'ree_date' => 'ReeDate',
-        'ree_service_id' => 'ReeServiceId',
-        'id' => 'id',
+        'number' => 'Number',
+        'is_active' => 'IsActive',
+        'contact' => 'Contact',
+        'datev_account_number_length' => 'DatevAccountNumberLength',
+        'datev_consultant_number' => 'DatevConsultantNumber',
+        'datev_client_number' => 'DatevClientNumber',
+        'id' => 'Id',
         'path' => 'Path',
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
@@ -240,18 +220,13 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
         'name' => 'setName',
-        'is_favorite' => 'setIsFavorite',
-        'is_printable' => 'setIsPrintable',
-        'parent_path' => 'setParentPath',
-        'ree_employee_id' => 'setReeEmployeeId',
-        'ree_cp_id' => 'setReeCpId',
-        'ree_sub_project_id' => 'setReeSubProjectId',
-        'ree_project_id' => 'setReeProjectId',
-        'ree_quantity' => 'setReeQuantity',
-        'ree_date' => 'setReeDate',
-        'ree_service_id' => 'setReeServiceId',
+        'number' => 'setNumber',
+        'is_active' => 'setIsActive',
+        'contact' => 'setContact',
+        'datev_account_number_length' => 'setDatevAccountNumberLength',
+        'datev_consultant_number' => 'setDatevConsultantNumber',
+        'datev_client_number' => 'setDatevClientNumber',
         'id' => 'setId',
         'path' => 'setPath',
         'e_tag' => 'setETag',
@@ -265,18 +240,13 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
         'name' => 'getName',
-        'is_favorite' => 'getIsFavorite',
-        'is_printable' => 'getIsPrintable',
-        'parent_path' => 'getParentPath',
-        'ree_employee_id' => 'getReeEmployeeId',
-        'ree_cp_id' => 'getReeCpId',
-        'ree_sub_project_id' => 'getReeSubProjectId',
-        'ree_project_id' => 'getReeProjectId',
-        'ree_quantity' => 'getReeQuantity',
-        'ree_date' => 'getReeDate',
-        'ree_service_id' => 'getReeServiceId',
+        'number' => 'getNumber',
+        'is_active' => 'getIsActive',
+        'contact' => 'getContact',
+        'datev_account_number_length' => 'getDatevAccountNumberLength',
+        'datev_consultant_number' => 'getDatevConsultantNumber',
+        'datev_client_number' => 'getDatevClientNumber',
         'id' => 'getId',
         'path' => 'getPath',
         'e_tag' => 'getETag',
@@ -341,19 +311,13 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('is_favorite', $data ?? [], null);
-        $this->setIfExists('is_printable', $data ?? [], null);
-        $this->setIfExists('parent_path', $data ?? [], null);
-        $this->setIfExists('ree_employee_id', $data ?? [], null);
-        $this->setIfExists('ree_cp_id', $data ?? [], null);
-        $this->setIfExists('ree_sub_project_id', $data ?? [], null);
-        $this->setIfExists('ree_project_id', $data ?? [], null);
-        $this->setIfExists('ree_quantity', $data ?? [], null);
-        $this->setIfExists('ree_date', $data ?? [], null);
-        $this->setIfExists('ree_service_id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('number', $data ?? [], null);
+        $this->setIfExists('is_active', $data ?? [], null);
+        $this->setIfExists('contact', $data ?? [], null);
+        $this->setIfExists('datev_account_number_length', $data ?? [], null);
+        $this->setIfExists('datev_consultant_number', $data ?? [], null);
+        $this->setIfExists('datev_client_number', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
@@ -407,33 +371,6 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets type
-     *
-     * @return string|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string|null $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
      * Gets name
      *
      * @return string|null
@@ -461,271 +398,163 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets is_favorite
-     *
-     * @return bool|null
-     */
-    public function getIsFavorite()
-    {
-        return $this->container['is_favorite'];
-    }
-
-    /**
-     * Sets is_favorite
-     *
-     * @param bool|null $is_favorite is_favorite
-     *
-     * @return self
-     */
-    public function setIsFavorite($is_favorite)
-    {
-        if (is_null($is_favorite)) {
-            throw new \InvalidArgumentException('non-nullable is_favorite cannot be null');
-        }
-        $this->container['is_favorite'] = $is_favorite;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_printable
-     *
-     * @return bool|null
-     */
-    public function getIsPrintable()
-    {
-        return $this->container['is_printable'];
-    }
-
-    /**
-     * Sets is_printable
-     *
-     * @param bool|null $is_printable is_printable
-     *
-     * @return self
-     */
-    public function setIsPrintable($is_printable)
-    {
-        if (is_null($is_printable)) {
-            throw new \InvalidArgumentException('non-nullable is_printable cannot be null');
-        }
-        $this->container['is_printable'] = $is_printable;
-
-        return $this;
-    }
-
-    /**
-     * Gets parent_path
+     * Gets number
      *
      * @return string|null
      */
-    public function getParentPath()
+    public function getNumber()
     {
-        return $this->container['parent_path'];
+        return $this->container['number'];
     }
 
     /**
-     * Sets parent_path
+     * Sets number
      *
-     * @param string|null $parent_path parent_path
+     * @param string|null $number number
      *
      * @return self
      */
-    public function setParentPath($parent_path)
+    public function setNumber($number)
     {
-        if (is_null($parent_path)) {
-            throw new \InvalidArgumentException('non-nullable parent_path cannot be null');
+        if (is_null($number)) {
+            throw new \InvalidArgumentException('non-nullable number cannot be null');
         }
-        $this->container['parent_path'] = $parent_path;
+        $this->container['number'] = $number;
 
         return $this;
     }
 
     /**
-     * Gets ree_employee_id
+     * Gets is_active
+     *
+     * @return bool|null
+     */
+    public function getIsActive()
+    {
+        return $this->container['is_active'];
+    }
+
+    /**
+     * Sets is_active
+     *
+     * @param bool|null $is_active is_active
+     *
+     * @return self
+     */
+    public function setIsActive($is_active)
+    {
+        if (is_null($is_active)) {
+            throw new \InvalidArgumentException('non-nullable is_active cannot be null');
+        }
+        $this->container['is_active'] = $is_active;
+
+        return $this;
+    }
+
+    /**
+     * Gets contact
+     *
+     * @return \Troi\Model\ApiContact|null
+     */
+    public function getContact()
+    {
+        return $this->container['contact'];
+    }
+
+    /**
+     * Sets contact
+     *
+     * @param \Troi\Model\ApiContact|null $contact contact
+     *
+     * @return self
+     */
+    public function setContact($contact)
+    {
+        if (is_null($contact)) {
+            throw new \InvalidArgumentException('non-nullable contact cannot be null');
+        }
+        $this->container['contact'] = $contact;
+
+        return $this;
+    }
+
+    /**
+     * Gets datev_account_number_length
      *
      * @return int|null
      */
-    public function getReeEmployeeId()
+    public function getDatevAccountNumberLength()
     {
-        return $this->container['ree_employee_id'];
+        return $this->container['datev_account_number_length'];
     }
 
     /**
-     * Sets ree_employee_id
+     * Sets datev_account_number_length
      *
-     * @param int|null $ree_employee_id ree_employee_id
+     * @param int|null $datev_account_number_length datev_account_number_length
      *
      * @return self
      */
-    public function setReeEmployeeId($ree_employee_id)
+    public function setDatevAccountNumberLength($datev_account_number_length)
     {
-        if (is_null($ree_employee_id)) {
-            throw new \InvalidArgumentException('non-nullable ree_employee_id cannot be null');
+        if (is_null($datev_account_number_length)) {
+            throw new \InvalidArgumentException('non-nullable datev_account_number_length cannot be null');
         }
-        $this->container['ree_employee_id'] = $ree_employee_id;
+        $this->container['datev_account_number_length'] = $datev_account_number_length;
 
         return $this;
     }
 
     /**
-     * Gets ree_cp_id
+     * Gets datev_consultant_number
      *
      * @return int|null
      */
-    public function getReeCpId()
+    public function getDatevConsultantNumber()
     {
-        return $this->container['ree_cp_id'];
+        return $this->container['datev_consultant_number'];
     }
 
     /**
-     * Sets ree_cp_id
+     * Sets datev_consultant_number
      *
-     * @param int|null $ree_cp_id ree_cp_id
+     * @param int|null $datev_consultant_number datev_consultant_number
      *
      * @return self
      */
-    public function setReeCpId($ree_cp_id)
+    public function setDatevConsultantNumber($datev_consultant_number)
     {
-        if (is_null($ree_cp_id)) {
-            throw new \InvalidArgumentException('non-nullable ree_cp_id cannot be null');
+        if (is_null($datev_consultant_number)) {
+            throw new \InvalidArgumentException('non-nullable datev_consultant_number cannot be null');
         }
-        $this->container['ree_cp_id'] = $ree_cp_id;
+        $this->container['datev_consultant_number'] = $datev_consultant_number;
 
         return $this;
     }
 
     /**
-     * Gets ree_sub_project_id
+     * Gets datev_client_number
      *
      * @return int|null
      */
-    public function getReeSubProjectId()
+    public function getDatevClientNumber()
     {
-        return $this->container['ree_sub_project_id'];
+        return $this->container['datev_client_number'];
     }
 
     /**
-     * Sets ree_sub_project_id
+     * Sets datev_client_number
      *
-     * @param int|null $ree_sub_project_id ree_sub_project_id
+     * @param int|null $datev_client_number datev_client_number
      *
      * @return self
      */
-    public function setReeSubProjectId($ree_sub_project_id)
+    public function setDatevClientNumber($datev_client_number)
     {
-        if (is_null($ree_sub_project_id)) {
-            throw new \InvalidArgumentException('non-nullable ree_sub_project_id cannot be null');
+        if (is_null($datev_client_number)) {
+            throw new \InvalidArgumentException('non-nullable datev_client_number cannot be null');
         }
-        $this->container['ree_sub_project_id'] = $ree_sub_project_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets ree_project_id
-     *
-     * @return int|null
-     */
-    public function getReeProjectId()
-    {
-        return $this->container['ree_project_id'];
-    }
-
-    /**
-     * Sets ree_project_id
-     *
-     * @param int|null $ree_project_id ree_project_id
-     *
-     * @return self
-     */
-    public function setReeProjectId($ree_project_id)
-    {
-        if (is_null($ree_project_id)) {
-            throw new \InvalidArgumentException('non-nullable ree_project_id cannot be null');
-        }
-        $this->container['ree_project_id'] = $ree_project_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets ree_quantity
-     *
-     * @return int|null
-     */
-    public function getReeQuantity()
-    {
-        return $this->container['ree_quantity'];
-    }
-
-    /**
-     * Sets ree_quantity
-     *
-     * @param int|null $ree_quantity ree_quantity
-     *
-     * @return self
-     */
-    public function setReeQuantity($ree_quantity)
-    {
-        if (is_null($ree_quantity)) {
-            throw new \InvalidArgumentException('non-nullable ree_quantity cannot be null');
-        }
-        $this->container['ree_quantity'] = $ree_quantity;
-
-        return $this;
-    }
-
-    /**
-     * Gets ree_date
-     *
-     * @return object|null
-     */
-    public function getReeDate()
-    {
-        return $this->container['ree_date'];
-    }
-
-    /**
-     * Sets ree_date
-     *
-     * @param object|null $ree_date ree_date
-     *
-     * @return self
-     */
-    public function setReeDate($ree_date)
-    {
-        if (is_null($ree_date)) {
-            throw new \InvalidArgumentException('non-nullable ree_date cannot be null');
-        }
-        $this->container['ree_date'] = $ree_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets ree_service_id
-     *
-     * @return int|null
-     */
-    public function getReeServiceId()
-    {
-        return $this->container['ree_service_id'];
-    }
-
-    /**
-     * Sets ree_service_id
-     *
-     * @param int|null $ree_service_id ree_service_id
-     *
-     * @return self
-     */
-    public function setReeServiceId($ree_service_id)
-    {
-        if (is_null($ree_service_id)) {
-            throw new \InvalidArgumentException('non-nullable ree_service_id cannot be null');
-        }
-        $this->container['ree_service_id'] = $ree_service_id;
+        $this->container['datev_client_number'] = $datev_client_number;
 
         return $this;
     }
@@ -733,7 +562,7 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets id
      *
-     * @return int|null
+     * @return string|null
      */
     public function getId()
     {
@@ -743,7 +572,7 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets id
      *
-     * @param int|null $id id
+     * @param string|null $id id
      *
      * @return self
      */
@@ -756,7 +585,6 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
 
         return $this;
     }
-
 
     /**
      * Gets path
@@ -771,7 +599,7 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets path
      *
-     * @param string $path path
+     * @param string $path /clients/1
      *
      * @return self
      */
@@ -788,7 +616,7 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets e_tag
      *
-     * @return int|null
+     * @return string|null
      */
     public function getETag()
     {
@@ -798,7 +626,7 @@ class ApiHourBillingClient implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets e_tag
      *
-     * @param int|null $e_tag e_tag
+     * @param string|null $e_tag e_tag
      *
      * @return self
      */

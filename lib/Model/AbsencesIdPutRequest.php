@@ -63,7 +63,7 @@ class AbsencesIdPutRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         'subject' => 'string',
         'description' => 'string',
         'destination' => 'object',
-        'employee' => '\Troi\Model\ApiSyncItem',
+        'employee' => '\Troi\Model\ApiEmployee',
         'absence_type' => '\Troi\Model\ApiAbsenceType',
         'half_day' => 'int',
         'absence_unit' => 'int',
@@ -340,7 +340,6 @@ class AbsencesIdPutRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->setIfExists('absence_unit', $data ?? [], null);
         $this->setIfExists('absence_hours', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -385,9 +384,6 @@ class AbsencesIdPutRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         }
         if ($this->container['absence_type'] === null) {
             $invalidProperties[] = "'absence_type' can't be null";
-        }
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
@@ -548,7 +544,7 @@ class AbsencesIdPutRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets employee
      *
-     * @return \Troi\Model\ApiSyncItem
+     * @return \Troi\Model\ApiEmployee
      */
     public function getEmployee()
     {
@@ -558,7 +554,7 @@ class AbsencesIdPutRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets employee
      *
-     * @param \Troi\Model\ApiSyncItem $employee employee
+     * @param \Troi\Model\ApiEmployee $employee employee
      *
      * @return self
      */

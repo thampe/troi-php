@@ -9,12 +9,11 @@ Name | Type | Description | Notes
 **subject** | **string** |  | [optional]
 **description** | **string** |  | [optional]
 **destination** | **object** |  | [optional]
-**employee** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  |
+**employee** | [**\Troi\Model\ApiEmployee**](ApiEmployee.md) |  |
 **absence_type** | [**\Troi\Model\ApiAbsenceType**](ApiAbsenceType.md) |  |
 **half_day** | **int** |  | [optional]
 **absence_unit** | **int** |  | [optional]
 **absence_hours** | **int** |  | [optional]
-**id** | **int** |  |
 **id** | **int** |  |
 **path** | **string** |  |
 **e_tag** | **string** |  | [optional]

@@ -9,6 +9,7 @@ All URIs are relative to https://demo.troi.software/api/v2/rest, except if the o
 | [**contactCategoriesIdGet()**](CategoriesApi.md#contactCategoriesIdGet) | **GET** /contactCategories/{id} | Fetch contact categorie by ID |
 | [**contactCategoriesIdPut()**](CategoriesApi.md#contactCategoriesIdPut) | **PUT** /contactCategories/{id} | Update contact categorie |
 | [**contactCategoriesPost()**](CategoriesApi.md#contactCategoriesPost) | **POST** /contactCategories | Save contact category |
+| [**miscCategoriesGet()**](CategoriesApi.md#miscCategoriesGet) | **GET** /misc/categories | Fetch all Categories |
 
 
 ## `contactCategoriesGet()`
@@ -323,6 +324,65 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `miscCategoriesGet()`
+
+```php
+miscCategoriesGet(): \Troi\Model\ApiListItem[]
+```
+
+Fetch all Categories
+
+Fetch all Categories
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = Troi\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Troi\Api\CategoriesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->miscCategoriesGet();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->miscCategoriesGet: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Troi\Model\ApiListItem[]**](../Model/ApiListItem.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

@@ -59,9 +59,9 @@ class ApiCurrency implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'root' => '\Troi\Model\ApiSyncItem',
-        'client' => '\Troi\Model\ApiSyncItem',
-        'customer' => '\Troi\Model\ApiSyncItem',
-        'project' => '\Troi\Model\ApiSyncItem',
+        'client' => '\Troi\Model\ApiClient',
+        'customer' => '\Troi\Model\ApiCustomer',
+        'project' => '\Troi\Model\ApiProject',
         'decimal_mark' => 'string',
         'thousands_mark' => 'string',
         'long_name' => 'string',
@@ -456,7 +456,7 @@ class ApiCurrency implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets client
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiClient|null
      */
     public function getClient()
     {
@@ -466,7 +466,7 @@ class ApiCurrency implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets client
      *
-     * @param \Troi\Model\ApiSyncItem|null $client client
+     * @param \Troi\Model\ApiClient|null $client client
      *
      * @return self
      */
@@ -483,7 +483,7 @@ class ApiCurrency implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets customer
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiCustomer|null
      */
     public function getCustomer()
     {
@@ -493,7 +493,7 @@ class ApiCurrency implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets customer
      *
-     * @param \Troi\Model\ApiSyncItem|null $customer customer
+     * @param \Troi\Model\ApiCustomer|null $customer customer
      *
      * @return self
      */
@@ -510,7 +510,7 @@ class ApiCurrency implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets project
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiProject|null
      */
     public function getProject()
     {
@@ -520,7 +520,7 @@ class ApiCurrency implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets project
      *
-     * @param \Troi\Model\ApiSyncItem|null $project project
+     * @param \Troi\Model\ApiProject|null $project project
      *
      * @return self
      */

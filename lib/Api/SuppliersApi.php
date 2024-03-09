@@ -146,7 +146,7 @@ class SuppliersApi
      *
      * @throws \Troi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object[]|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response
+     * @return \Troi\Model\ApiSupplier[]|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response
      */
     public function suppliersGet($client_id, $return_api_sync_items = null, $search = null, $is_active = null, $show_reference_details = null, string $contentType = self::contentTypes['suppliersGet'][0])
     {
@@ -168,7 +168,7 @@ class SuppliersApi
      *
      * @throws \Troi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object[]|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Troi\Model\ApiSupplier[]|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function suppliersGetWithHttpInfo($client_id, $return_api_sync_items = null, $search = null, $is_active = null, $show_reference_details = null, string $contentType = self::contentTypes['suppliersGet'][0])
     {
@@ -211,11 +211,11 @@ class SuppliersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('object[]' === '\SplFileObject') {
+                    if ('\Troi\Model\ApiSupplier[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('object[]' !== 'string') {
+                        if ('\Troi\Model\ApiSupplier[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -233,7 +233,7 @@ class SuppliersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object[]', []),
+                        ObjectSerializer::deserialize($content, '\Troi\Model\ApiSupplier[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -293,7 +293,7 @@ class SuppliersApi
                     ];
             }
 
-            $returnType = 'object[]';
+            $returnType = '\Troi\Model\ApiSupplier[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -326,7 +326,7 @@ class SuppliersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object[]',
+                        '\Troi\Model\ApiSupplier[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -394,7 +394,7 @@ class SuppliersApi
      */
     public function suppliersGetAsyncWithHttpInfo($client_id, $return_api_sync_items = null, $search = null, $is_active = null, $show_reference_details = null, string $contentType = self::contentTypes['suppliersGet'][0])
     {
-        $returnType = 'object[]';
+        $returnType = '\Troi\Model\ApiSupplier[]';
         $request = $this->suppliersGetRequest($client_id, $return_api_sync_items, $search, $is_active, $show_reference_details, $contentType);
 
         return $this->client
@@ -584,7 +584,7 @@ class SuppliersApi
      *
      * @throws \Troi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response
+     * @return \Troi\Model\ApiSupplier|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response
      */
     public function suppliersIdGet($id, string $contentType = self::contentTypes['suppliersIdGet'][0])
     {
@@ -602,7 +602,7 @@ class SuppliersApi
      *
      * @throws \Troi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Troi\Model\ApiSupplier|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function suppliersIdGetWithHttpInfo($id, string $contentType = self::contentTypes['suppliersIdGet'][0])
     {
@@ -645,11 +645,11 @@ class SuppliersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('object' === '\SplFileObject') {
+                    if ('\Troi\Model\ApiSupplier' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('object' !== 'string') {
+                        if ('\Troi\Model\ApiSupplier' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -667,7 +667,7 @@ class SuppliersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\Troi\Model\ApiSupplier', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -754,7 +754,7 @@ class SuppliersApi
                     ];
             }
 
-            $returnType = 'object';
+            $returnType = '\Troi\Model\ApiSupplier';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -787,7 +787,7 @@ class SuppliersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Troi\Model\ApiSupplier',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -855,7 +855,7 @@ class SuppliersApi
      */
     public function suppliersIdGetAsyncWithHttpInfo($id, string $contentType = self::contentTypes['suppliersIdGet'][0])
     {
-        $returnType = 'object';
+        $returnType = '\Troi\Model\ApiSupplier';
         $request = $this->suppliersIdGetRequest($id, $contentType);
 
         return $this->client
@@ -1430,16 +1430,16 @@ class SuppliersApi
      *
      * Save supplier
      *
-     * @param  \Troi\Model\UNKNOWN_BASE_TYPE $unknown_base_type unknown_base_type (required)
+     * @param  \Troi\Model\SuppliersPostRequest $suppliers_post_request suppliers_post_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['suppliersPost'] to see the possible values for this operation
      *
      * @throws \Troi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Troi\Model\ApiSyncItem[]|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response
      */
-    public function suppliersPost($unknown_base_type, string $contentType = self::contentTypes['suppliersPost'][0])
+    public function suppliersPost($suppliers_post_request, string $contentType = self::contentTypes['suppliersPost'][0])
     {
-        list($response) = $this->suppliersPostWithHttpInfo($unknown_base_type, $contentType);
+        list($response) = $this->suppliersPostWithHttpInfo($suppliers_post_request, $contentType);
         return $response;
     }
 
@@ -1448,16 +1448,16 @@ class SuppliersApi
      *
      * Save supplier
      *
-     * @param  \Troi\Model\UNKNOWN_BASE_TYPE $unknown_base_type (required)
+     * @param  \Troi\Model\SuppliersPostRequest $suppliers_post_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['suppliersPost'] to see the possible values for this operation
      *
      * @throws \Troi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Troi\Model\ApiSyncItem[]|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function suppliersPostWithHttpInfo($unknown_base_type, string $contentType = self::contentTypes['suppliersPost'][0])
+    public function suppliersPostWithHttpInfo($suppliers_post_request, string $contentType = self::contentTypes['suppliersPost'][0])
     {
-        $request = $this->suppliersPostRequest($unknown_base_type, $contentType);
+        $request = $this->suppliersPostRequest($suppliers_post_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1677,15 +1677,15 @@ class SuppliersApi
      *
      * Save supplier
      *
-     * @param  \Troi\Model\UNKNOWN_BASE_TYPE $unknown_base_type (required)
+     * @param  \Troi\Model\SuppliersPostRequest $suppliers_post_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['suppliersPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function suppliersPostAsync($unknown_base_type, string $contentType = self::contentTypes['suppliersPost'][0])
+    public function suppliersPostAsync($suppliers_post_request, string $contentType = self::contentTypes['suppliersPost'][0])
     {
-        return $this->suppliersPostAsyncWithHttpInfo($unknown_base_type, $contentType)
+        return $this->suppliersPostAsyncWithHttpInfo($suppliers_post_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1698,16 +1698,16 @@ class SuppliersApi
      *
      * Save supplier
      *
-     * @param  \Troi\Model\UNKNOWN_BASE_TYPE $unknown_base_type (required)
+     * @param  \Troi\Model\SuppliersPostRequest $suppliers_post_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['suppliersPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function suppliersPostAsyncWithHttpInfo($unknown_base_type, string $contentType = self::contentTypes['suppliersPost'][0])
+    public function suppliersPostAsyncWithHttpInfo($suppliers_post_request, string $contentType = self::contentTypes['suppliersPost'][0])
     {
         $returnType = '\Troi\Model\ApiSyncItem[]';
-        $request = $this->suppliersPostRequest($unknown_base_type, $contentType);
+        $request = $this->suppliersPostRequest($suppliers_post_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1748,19 +1748,19 @@ class SuppliersApi
     /**
      * Create request for operation 'suppliersPost'
      *
-     * @param  \Troi\Model\UNKNOWN_BASE_TYPE $unknown_base_type (required)
+     * @param  \Troi\Model\SuppliersPostRequest $suppliers_post_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['suppliersPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function suppliersPostRequest($unknown_base_type, string $contentType = self::contentTypes['suppliersPost'][0])
+    public function suppliersPostRequest($suppliers_post_request, string $contentType = self::contentTypes['suppliersPost'][0])
     {
 
-        // verify the required parameter 'unknown_base_type' is set
-        if ($unknown_base_type === null || (is_array($unknown_base_type) && count($unknown_base_type) === 0)) {
+        // verify the required parameter 'suppliers_post_request' is set
+        if ($suppliers_post_request === null || (is_array($suppliers_post_request) && count($suppliers_post_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $unknown_base_type when calling suppliersPost'
+                'Missing the required parameter $suppliers_post_request when calling suppliersPost'
             );
         }
 
@@ -1783,12 +1783,12 @@ class SuppliersApi
         );
 
         // for model (json/xml)
-        if (isset($unknown_base_type)) {
+        if (isset($suppliers_post_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($unknown_base_type));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($suppliers_post_request));
             } else {
-                $httpBody = $unknown_base_type;
+                $httpBody = $suppliers_post_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

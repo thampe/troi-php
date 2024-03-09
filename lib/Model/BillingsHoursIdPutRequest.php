@@ -59,9 +59,9 @@ class BillingsHoursIdPutRequest implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'client' => '\Troi\Model\ApiHourBillingClient',
-        'calculation_position' => '\Troi\Model\ApiHourBillingClient',
-        'service' => '\Troi\Model\ApiSyncItem',
-        'employee' => '\Troi\Model\ApiHourBillingClient',
+        'calculation_position' => '\Troi\Model\ApiHourBillingCalculationPosition',
+        'service' => '\Troi\Model\ApiService',
+        'employee' => '\Troi\Model\ApiHourBillingEmployee',
         'date' => 'string',
         'quantity' => 'float',
         'remark' => 'string',
@@ -347,7 +347,6 @@ class BillingsHoursIdPutRequest implements ModelInterface, ArrayAccess, \JsonSer
         $this->setIfExists('is_invoiced', $data ?? [], null);
         $this->setIfExists('is_approved', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -395,9 +394,6 @@ class BillingsHoursIdPutRequest implements ModelInterface, ArrayAccess, \JsonSer
         }
         if ($this->container['quantity'] === null) {
             $invalidProperties[] = "'quantity' can't be null";
-        }
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
@@ -450,7 +446,7 @@ class BillingsHoursIdPutRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets calculation_position
      *
-     * @return \Troi\Model\ApiHourBillingClient
+     * @return \Troi\Model\ApiHourBillingCalculationPosition
      */
     public function getCalculationPosition()
     {
@@ -460,7 +456,7 @@ class BillingsHoursIdPutRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets calculation_position
      *
-     * @param \Troi\Model\ApiHourBillingClient $calculation_position calculation_position
+     * @param \Troi\Model\ApiHourBillingCalculationPosition $calculation_position calculation_position
      *
      * @return self
      */
@@ -477,7 +473,7 @@ class BillingsHoursIdPutRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets service
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiService|null
      */
     public function getService()
     {
@@ -487,7 +483,7 @@ class BillingsHoursIdPutRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets service
      *
-     * @param \Troi\Model\ApiSyncItem|null $service service
+     * @param \Troi\Model\ApiService|null $service service
      *
      * @return self
      */
@@ -504,7 +500,7 @@ class BillingsHoursIdPutRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets employee
      *
-     * @return \Troi\Model\ApiHourBillingClient
+     * @return \Troi\Model\ApiHourBillingEmployee
      */
     public function getEmployee()
     {
@@ -514,7 +510,7 @@ class BillingsHoursIdPutRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets employee
      *
-     * @param \Troi\Model\ApiHourBillingClient $employee employee
+     * @param \Troi\Model\ApiHourBillingEmployee $employee employee
      *
      * @return self
      */

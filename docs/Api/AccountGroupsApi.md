@@ -5,7 +5,7 @@ All URIs are relative to https://demo.troi.software/api/v2/rest, except if the o
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**accountGroupsGet()**](AccountGroupsApi.md#accountGroupsGet) | **GET** /accountGroups | Fetch all account groups for the given clientId |
-| [**accountGroupsIdDelete()**](AccountGroupsApi.md#accountGroupsIdDelete) | **DELETE** /accountGroups/{id} | Delete Account Groups |
+| [**accountGroupsIdDelete()**](AccountGroupsApi.md#accountGroupsIdDelete) | **DELETE** /accountGroups/{id} | Delete Absence Groups |
 | [**accountGroupsIdGet()**](AccountGroupsApi.md#accountGroupsIdGet) | **GET** /accountGroups/{id} | Fetch Account Group for the given Account Group ID |
 | [**accountGroupsIdPut()**](AccountGroupsApi.md#accountGroupsIdPut) | **PUT** /accountGroups/{id} | Update Account Groups Object |
 | [**accountGroupsPost()**](AccountGroupsApi.md#accountGroupsPost) | **POST** /accountGroups | Save account groups object |
@@ -79,9 +79,9 @@ try {
 accountGroupsIdDelete($id): int
 ```
 
-Delete Account Groups
+Delete Absence Groups
 
-Delete Account Groups
+Delete Absence Groups
 
 ### Example
 

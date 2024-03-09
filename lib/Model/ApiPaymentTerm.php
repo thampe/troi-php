@@ -333,7 +333,6 @@ class ApiPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('discount_days4', $data ?? [], null);
         $this->setIfExists('discount_rate4', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);

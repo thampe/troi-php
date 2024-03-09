@@ -63,7 +63,7 @@ class AbsencesPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'subject' => 'string',
         'description' => 'string',
         'destination' => 'object',
-        'employee' => '\Troi\Model\ApiSyncItem',
+        'employee' => '\Troi\Model\ApiEmployee',
         'absence_type' => '\Troi\Model\ApiAbsenceType',
         'half_day' => 'int',
         'absence_unit' => 'int',
@@ -340,7 +340,6 @@ class AbsencesPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->setIfExists('absence_unit', $data ?? [], null);
         $this->setIfExists('absence_hours', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -539,7 +538,7 @@ class AbsencesPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets employee
      *
-     * @return \Troi\Model\ApiSyncItem
+     * @return \Troi\Model\ApiEmployee
      */
     public function getEmployee()
     {
@@ -549,7 +548,7 @@ class AbsencesPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets employee
      *
-     * @param \Troi\Model\ApiSyncItem $employee employee
+     * @param \Troi\Model\ApiEmployee $employee employee
      *
      * @return self
      */
@@ -697,7 +696,6 @@ class AbsencesPostRequest implements ModelInterface, ArrayAccess, \JsonSerializa
 
         return $this;
     }
-
 
     /**
      * Gets path

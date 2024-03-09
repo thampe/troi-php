@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **client** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  |
 **type** | **int** |  | [optional]
 **id** | **int** |  | [optional]
-**id** | **int** |  | [optional]
 **path** | **string** |  | [optional]
 **e_tag** | **string** |  | [optional]
 **is_deleted** | **bool** |  | [optional]

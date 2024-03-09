@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **root** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
-**client** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
-**customer** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
-**project** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
+**client** | [**\Troi\Model\ApiClient**](ApiClient.md) |  | [optional]
+**customer** | [**\Troi\Model\ApiCustomer**](ApiCustomer.md) |  | [optional]
+**project** | [**\Troi\Model\ApiProject**](ApiProject.md) |  | [optional]
 **decimal_mark** | **string** |  | [optional]
 **thousands_mark** | **string** |  | [optional]
 **long_name** | **string** |  | [optional]

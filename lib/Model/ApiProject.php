@@ -585,7 +585,7 @@ class ApiProject implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets client
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiClient|null
      */
     public function getClient()
     {
@@ -595,7 +595,7 @@ class ApiProject implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets client
      *
-     * @param \Troi\Model\ApiSyncItem|null $client client
+     * @param \Troi\Model\ApiClient|null $client client
      *
      * @return self
      */
@@ -612,7 +612,7 @@ class ApiProject implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets customer
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiCustomer|null
      */
     public function getCustomer()
     {
@@ -622,7 +622,7 @@ class ApiProject implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets customer
      *
-     * @param \Troi\Model\ApiSyncItem|null $customer customer
+     * @param \Troi\Model\ApiCustomer|null $customer customer
      *
      * @return self
      */
@@ -828,7 +828,7 @@ class ApiProject implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets leader
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiEmployee|null
      */
     public function getLeader()
     {
@@ -838,7 +838,7 @@ class ApiProject implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets leader
      *
-     * @param \Troi\Model\ApiSyncItem|null $leader leader
+     * @param \Troi\Model\ApiEmployee|null $leader leader
      *
      * @return self
      */
@@ -1017,7 +1017,7 @@ class ApiProject implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets contact
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiContact|null
      */
     public function getContact()
     {
@@ -1027,7 +1027,7 @@ class ApiProject implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contact
      *
-     * @param \Troi\Model\ApiSyncItem|null $contact contact
+     * @param \Troi\Model\ApiContact|null $contact contact
      *
      * @return self
      */

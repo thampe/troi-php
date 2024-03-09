@@ -61,7 +61,7 @@ class ApiClient implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'number' => 'string',
         'is_active' => 'bool',
-        'contact' => '\Troi\Model\ApiSyncItem',
+        'contact' => '\Troi\Model\ApiContact',
         'datev_account_number_length' => 'int',
         'datev_consultant_number' => 'int',
         'datev_client_number' => 'int',
@@ -451,7 +451,7 @@ class ApiClient implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets contact
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiContact|null
      */
     public function getContact()
     {
@@ -461,7 +461,7 @@ class ApiClient implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contact
      *
-     * @param \Troi\Model\ApiSyncItem|null $contact contact
+     * @param \Troi\Model\ApiContact|null $contact contact
      *
      * @return self
      */

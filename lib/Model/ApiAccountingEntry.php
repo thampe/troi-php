@@ -58,12 +58,12 @@ class ApiAccountingEntry implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'client' => '\Troi\Model\ApiSyncItem',
+        'client' => '\Troi\Model\ApiClient',
         'cost_center' => '\Troi\Model\ApiSyncItem',
         'cost_center1' => '\Troi\Model\ApiSyncItem',
         'cost_center2' => '\Troi\Model\ApiSyncItem',
         'amount' => 'int',
-        'account' => '\Troi\Model\ApiSyncItem',
+        'account' => '\Troi\Model\ApiAccount',
         'contra_account' => '\Troi\Model\ApiSyncItem',
         'accounting_entry_collection' => 'object',
         'document_date' => 'string',
@@ -445,7 +445,6 @@ class ApiAccountingEntry implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('payment_term', $data ?? [], null);
         $this->setIfExists('project_number', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('path', $data ?? [], null);
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
@@ -497,7 +496,7 @@ class ApiAccountingEntry implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets client
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiClient|null
      */
     public function getClient()
     {
@@ -507,7 +506,7 @@ class ApiAccountingEntry implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets client
      *
-     * @param \Troi\Model\ApiSyncItem|null $client client
+     * @param \Troi\Model\ApiClient|null $client client
      *
      * @return self
      */
@@ -632,7 +631,7 @@ class ApiAccountingEntry implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets account
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiAccount|null
      */
     public function getAccount()
     {
@@ -642,7 +641,7 @@ class ApiAccountingEntry implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets account
      *
-     * @param \Troi\Model\ApiSyncItem|null $account account
+     * @param \Troi\Model\ApiAccount|null $account account
      *
      * @return self
      */

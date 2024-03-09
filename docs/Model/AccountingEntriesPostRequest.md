@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**client** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  |
+**client** | [**\Troi\Model\ApiClient**](ApiClient.md) |  |
 **cost_center** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
 **cost_center1** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
 **cost_center2** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
 **amount** | **int** |  | [optional]
-**account** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  |
+**account** | [**\Troi\Model\ApiAccount**](ApiAccount.md) |  |
 **contra_account** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  |
 **accounting_entry_collection** | **object** |  |
 **document_date** | **string** |  | [optional]
@@ -29,7 +29,6 @@ Name | Type | Description | Notes
 **parent_id** | **int** |  | [optional]
 **payment_term** | [**\Troi\Model\ApiPaymentTerm**](ApiPaymentTerm.md) |  |
 **project_number** | **string** |  | [optional]
-**id** | **int** |  | [optional]
 **id** | **int** |  | [optional]
 **path** | **string** |  | [optional]
 **e_tag** | **string** |  | [optional]
