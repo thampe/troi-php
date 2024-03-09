@@ -6853,7 +6853,7 @@
       "ApiProjectStatus": {
         "type": "object",
         "properties": {
-          "Name": {
+          "Description": {
             "type": "string",
             "example": "abgeschlossen"
           },

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** |  | [optional]
+**description** | **string** |  | [optional]
 **is_default** | **bool** |  | [optional]
 **is_blocked_for_time_recording** | **bool** |  | [optional]
 **is_blocked_for_bookkeeping** | **bool** |  | [optional]

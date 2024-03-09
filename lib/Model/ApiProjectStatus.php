@@ -58,7 +58,7 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'name' => 'string',
+        'description' => 'string',
         'is_default' => 'bool',
         'is_blocked_for_time_recording' => 'bool',
         'is_blocked_for_bookkeeping' => 'bool',
@@ -77,7 +77,7 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'name' => null,
+        'description' => null,
         'is_default' => null,
         'is_blocked_for_time_recording' => null,
         'is_blocked_for_bookkeeping' => null,
@@ -94,7 +94,7 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'name' => false,
+        'description' => false,
         'is_default' => false,
         'is_blocked_for_time_recording' => false,
         'is_blocked_for_bookkeeping' => false,
@@ -191,7 +191,7 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'Name',
+        'description' => 'Description',
         'is_default' => 'IsDefault',
         'is_blocked_for_time_recording' => 'IsBlockedForTimeRecording',
         'is_blocked_for_bookkeeping' => 'IsBlockedForBookkeeping',
@@ -208,7 +208,7 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
+        'description' => 'setDescription',
         'is_default' => 'setIsDefault',
         'is_blocked_for_time_recording' => 'setIsBlockedForTimeRecording',
         'is_blocked_for_bookkeeping' => 'setIsBlockedForBookkeeping',
@@ -225,7 +225,7 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
+        'description' => 'getDescription',
         'is_default' => 'getIsDefault',
         'is_blocked_for_time_recording' => 'getIsBlockedForTimeRecording',
         'is_blocked_for_bookkeeping' => 'getIsBlockedForBookkeeping',
@@ -293,7 +293,7 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('is_default', $data ?? [], null);
         $this->setIfExists('is_blocked_for_time_recording', $data ?? [], null);
         $this->setIfExists('is_blocked_for_bookkeeping', $data ?? [], null);
@@ -347,28 +347,28 @@ class ApiProjectStatus implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets name
+     * Gets description
      *
      * @return string|null
      */
-    public function getName()
+    public function getDescription()
     {
-        return $this->container['name'];
+        return $this->container['description'];
     }
 
     /**
-     * Sets name
+     * Sets description
      *
-     * @param string|null $name name
+     * @param string|null $description description
      *
      * @return self
      */
-    public function setName($name)
+    public function setDescription($description)
     {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        if (is_null($description)) {
+            throw new \InvalidArgumentException('non-nullable description cannot be null');
         }
-        $this->container['name'] = $name;
+        $this->container['description'] = $description;
 
         return $this;
     }
