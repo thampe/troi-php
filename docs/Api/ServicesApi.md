@@ -5,6 +5,7 @@ All URIs are relative to https://demo.troi.software/api/v2/rest, except if the o
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**servicesGet()**](ServicesApi.md#servicesGet) | **GET** /services | Fetch all Services for the given clientId |
+| [**servicesIdGet()**](ServicesApi.md#servicesIdGet) | **GET** /services/{id} | Fetch Services given Service ID |
 
 
 ## `servicesGet()`
@@ -55,6 +56,68 @@ try {
 ### Return type
 
 [**\Troi\Model\ApiService[]**](../Model/ApiService.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `servicesIdGet()`
+
+```php
+servicesIdGet($id): \Troi\Model\ApiService
+```
+
+Fetch Services given Service ID
+
+Fetch Services given Services ID
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = Troi\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Troi\Api\ServicesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 1; // int | Services id
+
+try {
+    $result = $apiInstance->servicesIdGet($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ServicesApi->servicesIdGet: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| Services id | |
+
+### Return type
+
+[**\Troi\Model\ApiService**](../Model/ApiService.md)
 
 ### Authorization
 

@@ -4894,15 +4894,15 @@
     "/services/{id}": {
       "get": {
         "tags": [
-          "employees"
+          "services"
         ],
-        "summary": "Fetch Employee given Employee ID",
-        "description": "Fetch Employee given Employee ID",
+        "summary": "Fetch Services given Service ID",
+        "description": "Fetch Services given Services ID",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "Employee id",
+            "description": "Services id",
             "required": true,
             "schema": {
               "type": "integer",
