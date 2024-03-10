@@ -65,6 +65,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'project' => '\Troi\Model\ApiProject',
         'subproject' => '\Troi\Model\ApiSubproject',
         'customer' => '\Troi\Model\ApiCustomer',
+        'client' => '\Troi\Model\ApiClient',
         'is_external_service' => 'bool',
         'is_service_needed' => 'bool',
         'display_path' => 'string',
@@ -77,6 +78,8 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'is_billable' => 'bool',
         'is_optional' => 'bool',
         'is_printable' => 'bool',
+        'is_blocked_for_bookkeeping' => 'bool',
+        'is_blocked_for_time_recording' => 'bool',
         'hour_closed' => 'bool',
         'account_id' => 'int',
         'cost_center_id' => 'int',
@@ -116,6 +119,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'project' => null,
         'subproject' => null,
         'customer' => null,
+        'client' => null,
         'is_external_service' => null,
         'is_service_needed' => null,
         'display_path' => null,
@@ -128,6 +132,8 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'is_billable' => null,
         'is_optional' => null,
         'is_printable' => null,
+        'is_blocked_for_bookkeeping' => null,
+        'is_blocked_for_time_recording' => null,
         'hour_closed' => null,
         'account_id' => null,
         'cost_center_id' => null,
@@ -165,6 +171,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'project' => false,
         'subproject' => false,
         'customer' => false,
+        'client' => false,
         'is_external_service' => false,
         'is_service_needed' => false,
         'display_path' => false,
@@ -177,6 +184,8 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'is_billable' => false,
         'is_optional' => false,
         'is_printable' => false,
+        'is_blocked_for_bookkeeping' => false,
+        'is_blocked_for_time_recording' => false,
         'hour_closed' => false,
         'account_id' => false,
         'cost_center_id' => false,
@@ -294,6 +303,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'project' => 'Project',
         'subproject' => 'Subproject',
         'customer' => 'Customer',
+        'client' => 'Client',
         'is_external_service' => 'IsExternalService',
         'is_service_needed' => 'IsServiceNeeded',
         'display_path' => 'DisplayPath',
@@ -306,6 +316,8 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'is_billable' => 'IsBillable',
         'is_optional' => 'IsOptional',
         'is_printable' => 'IsPrintable',
+        'is_blocked_for_bookkeeping' => 'IsBlockedForBookkeeping',
+        'is_blocked_for_time_recording' => 'IsBlockedForTimeRecording',
         'hour_closed' => 'HourClosed',
         'account_id' => 'AccountId',
         'cost_center_id' => 'CostCenterId',
@@ -343,6 +355,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'project' => 'setProject',
         'subproject' => 'setSubproject',
         'customer' => 'setCustomer',
+        'client' => 'setClient',
         'is_external_service' => 'setIsExternalService',
         'is_service_needed' => 'setIsServiceNeeded',
         'display_path' => 'setDisplayPath',
@@ -355,6 +368,8 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'is_billable' => 'setIsBillable',
         'is_optional' => 'setIsOptional',
         'is_printable' => 'setIsPrintable',
+        'is_blocked_for_bookkeeping' => 'setIsBlockedForBookkeeping',
+        'is_blocked_for_time_recording' => 'setIsBlockedForTimeRecording',
         'hour_closed' => 'setHourClosed',
         'account_id' => 'setAccountId',
         'cost_center_id' => 'setCostCenterId',
@@ -392,6 +407,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'project' => 'getProject',
         'subproject' => 'getSubproject',
         'customer' => 'getCustomer',
+        'client' => 'getClient',
         'is_external_service' => 'getIsExternalService',
         'is_service_needed' => 'getIsServiceNeeded',
         'display_path' => 'getDisplayPath',
@@ -404,6 +420,8 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'is_billable' => 'getIsBillable',
         'is_optional' => 'getIsOptional',
         'is_printable' => 'getIsPrintable',
+        'is_blocked_for_bookkeeping' => 'getIsBlockedForBookkeeping',
+        'is_blocked_for_time_recording' => 'getIsBlockedForTimeRecording',
         'hour_closed' => 'getHourClosed',
         'account_id' => 'getAccountId',
         'cost_center_id' => 'getCostCenterId',
@@ -492,6 +510,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         $this->setIfExists('project', $data ?? [], null);
         $this->setIfExists('subproject', $data ?? [], null);
         $this->setIfExists('customer', $data ?? [], null);
+        $this->setIfExists('client', $data ?? [], null);
         $this->setIfExists('is_external_service', $data ?? [], null);
         $this->setIfExists('is_service_needed', $data ?? [], null);
         $this->setIfExists('display_path', $data ?? [], null);
@@ -504,6 +523,8 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         $this->setIfExists('is_billable', $data ?? [], null);
         $this->setIfExists('is_optional', $data ?? [], null);
         $this->setIfExists('is_printable', $data ?? [], null);
+        $this->setIfExists('is_blocked_for_bookkeeping', $data ?? [], null);
+        $this->setIfExists('is_blocked_for_time_recording', $data ?? [], null);
         $this->setIfExists('hour_closed', $data ?? [], null);
         $this->setIfExists('account_id', $data ?? [], null);
         $this->setIfExists('cost_center_id', $data ?? [], null);
@@ -755,6 +776,33 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
             throw new \InvalidArgumentException('non-nullable customer cannot be null');
         }
         $this->container['customer'] = $customer;
+
+        return $this;
+    }
+
+    /**
+     * Gets client
+     *
+     * @return \Troi\Model\ApiClient|null
+     */
+    public function getClient()
+    {
+        return $this->container['client'];
+    }
+
+    /**
+     * Sets client
+     *
+     * @param \Troi\Model\ApiClient|null $client client
+     *
+     * @return self
+     */
+    public function setClient($client)
+    {
+        if (is_null($client)) {
+            throw new \InvalidArgumentException('non-nullable client cannot be null');
+        }
+        $this->container['client'] = $client;
 
         return $this;
     }
@@ -1079,6 +1127,60 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
             throw new \InvalidArgumentException('non-nullable is_printable cannot be null');
         }
         $this->container['is_printable'] = $is_printable;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_blocked_for_bookkeeping
+     *
+     * @return bool|null
+     */
+    public function getIsBlockedForBookkeeping()
+    {
+        return $this->container['is_blocked_for_bookkeeping'];
+    }
+
+    /**
+     * Sets is_blocked_for_bookkeeping
+     *
+     * @param bool|null $is_blocked_for_bookkeeping is_blocked_for_bookkeeping
+     *
+     * @return self
+     */
+    public function setIsBlockedForBookkeeping($is_blocked_for_bookkeeping)
+    {
+        if (is_null($is_blocked_for_bookkeeping)) {
+            throw new \InvalidArgumentException('non-nullable is_blocked_for_bookkeeping cannot be null');
+        }
+        $this->container['is_blocked_for_bookkeeping'] = $is_blocked_for_bookkeeping;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_blocked_for_time_recording
+     *
+     * @return bool|null
+     */
+    public function getIsBlockedForTimeRecording()
+    {
+        return $this->container['is_blocked_for_time_recording'];
+    }
+
+    /**
+     * Sets is_blocked_for_time_recording
+     *
+     * @param bool|null $is_blocked_for_time_recording is_blocked_for_time_recording
+     *
+     * @return self
+     */
+    public function setIsBlockedForTimeRecording($is_blocked_for_time_recording)
+    {
+        if (is_null($is_blocked_for_time_recording)) {
+            throw new \InvalidArgumentException('non-nullable is_blocked_for_time_recording cannot be null');
+        }
+        $this->container['is_blocked_for_time_recording'] = $is_blocked_for_time_recording;
 
         return $this;
     }

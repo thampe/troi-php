@@ -5282,53 +5282,6 @@
         ]
       }
     },
-    "/misc/projectStatuses/{id}": {
-      "get": {
-        "tags": [
-          "projectStatuses"
-        ],
-        "summary": "Fetch Project Status given Project Status ID",
-        "description": "Fetch Project Status given Project Status ID",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Project Status id",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "example": 1
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiProjectStatus"
-                }
-              }
-            }
-          },
-          "400": {
-            "$ref": "#/components/responses/BadRequest"
-          },
-          "401": {
-            "$ref": "#/components/responses/UnauthorizedError"
-          },
-          "404": {
-            "$ref": "#/components/responses/NotFound"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
     "/misc/projectTypes": {
       "get": {
         "tags": [
@@ -6452,6 +6405,9 @@
           "Customer": {
             "$ref": "#/components/schemas/ApiCustomer"
           },
+          "Client": {
+            "$ref": "#/components/schemas/ApiClient"
+          },
           "IsExternalService": {
             "type": "boolean",
             "example": true
@@ -6497,6 +6453,12 @@
           "IsPrintable": {
             "type": "boolean",
             "example": true
+          },
+          "IsBlockedForBookkeeping":{
+            "type": "boolean"
+          },
+          "IsBlockedForTimeRecording":{
+            "type": "boolean"
           },
           "HourClosed": {
             "type": "boolean",

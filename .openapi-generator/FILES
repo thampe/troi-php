@@ -174,4 +174,3 @@ lib/Model/SuppliersIdPutRequest.php
 lib/Model/SuppliersPostRequest.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Api/AbsenceTypesApiTest.php
