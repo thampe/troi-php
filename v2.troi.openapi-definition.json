@@ -7289,7 +7289,7 @@
         "type": "object",
         "properties": {
           "Client": {
-            "$ref": "#/components/schemas/ApiSyncItem"
+            "$ref": "#/components/schemas/ApiClient"
           },
           "Debitor": {
             "$ref": "#/components/schemas/ApiSyncItem"
@@ -7302,14 +7302,14 @@
             "example": 1
           },
           "PaymentTerm": {
-            "$ref": "#/components/schemas/ApiSyncItem"
+            "$ref": "#/components/schemas/ApiPaymentTerm"
           },
           "IsActive": {
             "type": "boolean",
             "example": true
           },
           "Contact": {
-            "$ref": "#/components/schemas/ApiSyncItem"
+            "$ref": "#/components/schemas/ApiContact"
           },
           "Shortcut": {
             "type": "string"

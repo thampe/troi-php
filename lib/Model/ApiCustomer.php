@@ -58,13 +58,13 @@ class ApiCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'client' => '\Troi\Model\ApiSyncItem',
+        'client' => '\Troi\Model\ApiClient',
         'debitor' => '\Troi\Model\ApiSyncItem',
         'tax_rate' => '\Troi\Model\ApiSyncItem',
         'tax_rate_display_mode' => 'int',
-        'payment_term' => '\Troi\Model\ApiSyncItem',
+        'payment_term' => '\Troi\Model\ApiPaymentTerm',
         'is_active' => 'bool',
-        'contact' => '\Troi\Model\ApiSyncItem',
+        'contact' => '\Troi\Model\ApiContact',
         'shortcut' => 'string',
         'number' => 'string',
         'vat_number' => 'string',
@@ -419,7 +419,7 @@ class ApiCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets client
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiClient|null
      */
     public function getClient()
     {
@@ -429,7 +429,7 @@ class ApiCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets client
      *
-     * @param \Troi\Model\ApiSyncItem|null $client client
+     * @param \Troi\Model\ApiClient|null $client client
      *
      * @return self
      */
@@ -527,7 +527,7 @@ class ApiCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets payment_term
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiPaymentTerm|null
      */
     public function getPaymentTerm()
     {
@@ -537,7 +537,7 @@ class ApiCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payment_term
      *
-     * @param \Troi\Model\ApiSyncItem|null $payment_term payment_term
+     * @param \Troi\Model\ApiPaymentTerm|null $payment_term payment_term
      *
      * @return self
      */
@@ -581,7 +581,7 @@ class ApiCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets contact
      *
-     * @return \Troi\Model\ApiSyncItem|null
+     * @return \Troi\Model\ApiContact|null
      */
     public function getContact()
     {
@@ -591,7 +591,7 @@ class ApiCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contact
      *
-     * @param \Troi\Model\ApiSyncItem|null $contact contact
+     * @param \Troi\Model\ApiContact|null $contact contact
      *
      * @return self
      */

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**client** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
+**client** | [**\Troi\Model\ApiClient**](ApiClient.md) |  | [optional]
 **debitor** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
 **tax_rate** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
 **tax_rate_display_mode** | **int** |  | [optional]
-**payment_term** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
+**payment_term** | [**\Troi\Model\ApiPaymentTerm**](ApiPaymentTerm.md) |  | [optional]
 **is_active** | **bool** |  | [optional]
-**contact** | [**\Troi\Model\ApiSyncItem**](ApiSyncItem.md) |  | [optional]
+**contact** | [**\Troi\Model\ApiContact**](ApiContact.md) |  | [optional]
 **shortcut** | **string** |  | [optional]
 **number** | **string** |  | [optional]
 **vat_number** | **string** |  | [optional]
