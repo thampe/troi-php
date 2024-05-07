@@ -151,11 +151,9 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**customersPost**](docs/Api/CustomersApi.md#customerspost) | **POST** /customers | Save customer
 *EmployeesApi* | [**employeesGet**](docs/Api/EmployeesApi.md#employeesget) | **GET** /employees | Fetch all Employees for the given clientId
 *EmployeesApi* | [**employeesIdGet**](docs/Api/EmployeesApi.md#employeesidget) | **GET** /employees/{id} | Fetch Employee given Employee ID
-*EmployeesApi* | [**servicesIdGet**](docs/Api/EmployeesApi.md#servicesidget) | **GET** /services/{id} | Fetch Employee given Employee ID
 *ProjectFoldersApi* | [**projectFoldersGet**](docs/Api/ProjectFoldersApi.md#projectfoldersget) | **GET** /projectFolders | Fetch all ProjectFolders for the given clientId
 *ProjectFoldersApi* | [**projectFoldersIdGet**](docs/Api/ProjectFoldersApi.md#projectfoldersidget) | **GET** /projectFolders/{id} | Fetch ProjectFolders given ProjectFolder ID
 *ProjectStatusesApi* | [**miscProjectStatusesGet**](docs/Api/ProjectStatusesApi.md#miscprojectstatusesget) | **GET** /misc/projectStatuses | Fetch all Project Statuses for the given clientId
-*ProjectStatusesApi* | [**miscProjectStatusesIdGet**](docs/Api/ProjectStatusesApi.md#miscprojectstatusesidget) | **GET** /misc/projectStatuses/{id} | Fetch Project Status given Project Status ID
 *ProjectTypesApi* | [**miscProjectTypesGet**](docs/Api/ProjectTypesApi.md#miscprojecttypesget) | **GET** /misc/projectTypes | Fetch all Project Types for the given clientId
 *ProjectTypesApi* | [**miscProjectTypesIdGet**](docs/Api/ProjectTypesApi.md#miscprojecttypesidget) | **GET** /misc/projectTypes/{id} | Fetch Project Types given Project Type ID
 *ProjectsApi* | [**projectsGet**](docs/Api/ProjectsApi.md#projectsget) | **GET** /projects | Fetch all projects from given client
@@ -164,12 +162,15 @@ Class | Method | HTTP request | Description
 *ProjectsApi* | [**projectsIdPut**](docs/Api/ProjectsApi.md#projectsidput) | **PUT** /projects/{id} | Update project
 *ProjectsApi* | [**projectsPost**](docs/Api/ProjectsApi.md#projectspost) | **POST** /projects | Save project
 *ServicesApi* | [**servicesGet**](docs/Api/ServicesApi.md#servicesget) | **GET** /services | Fetch all Services for the given clientId
+*ServicesApi* | [**servicesIdGet**](docs/Api/ServicesApi.md#servicesidget) | **GET** /services/{id} | Fetch Services given Service ID
 *SubprojectsApi* | [**subprojectsGet**](docs/Api/SubprojectsApi.md#subprojectsget) | **GET** /subprojects | Fetch all Subprojects for the given clientId
 *SubprojectsApi* | [**subprojectsIdGet**](docs/Api/SubprojectsApi.md#subprojectsidget) | **GET** /subprojects/{id} | Fetch Subproject given Subproject ID
 *SuppliersApi* | [**suppliersGet**](docs/Api/SuppliersApi.md#suppliersget) | **GET** /suppliers | Fetch all suppliers from given client
 *SuppliersApi* | [**suppliersIdGet**](docs/Api/SuppliersApi.md#suppliersidget) | **GET** /suppliers/{id} | Fetch supplier for the given supplier ID
 *SuppliersApi* | [**suppliersIdPut**](docs/Api/SuppliersApi.md#suppliersidput) | **PUT** /suppliers/{id} | Update supplier
 *SuppliersApi* | [**suppliersPost**](docs/Api/SuppliersApi.md#supplierspost) | **POST** /suppliers | Save supplier
+*UnitsApi* | [**miscUnitsGet**](docs/Api/UnitsApi.md#miscunitsget) | **GET** /misc/units | Fetch all units
+*UnitsApi* | [**miscUnitsIdGet**](docs/Api/UnitsApi.md#miscunitsidget) | **GET** /misc/units/{id} | Fetch unit given unit ID
 
 ## Models
 

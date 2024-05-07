@@ -1,6 +1,6 @@
 {
     "name": "thampe/troi-sdk",
-    "description": "Troi API Implementation in PHP",
+    "description": "This is the official API documentation of Troi.  # Authentication  Troi offers basic auth for authentication.  <security-definitions />",
     "keywords": [
         "openapitools",
         "openapi-generator",
@@ -8,14 +8,14 @@
         "php",
         "sdk",
         "rest",
-        "api",
-        "troi"
+        "api"
     ],
+    "homepage": "https://openapi-generator.tech",
     "license": "MIT",
     "authors": [
         {
             "name": "Thomas Hampe",
-            "email": "github@hampe.co"
+            "homepage": "https://openapi-generator.tech"
         }
     ],
     "require": {
