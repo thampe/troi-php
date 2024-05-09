@@ -11,7 +11,7 @@ All URIs are relative to https://demo.troi.software/api/v2/rest, except if the o
 ## `miscUnitsGet()`
 
 ```php
-miscUnitsGet(): \Troi\Model\ApiUnit[]
+miscUnitsGet($client_id): \Troi\Model\ApiUnit[]
 ```
 
 Fetch all units
@@ -37,9 +37,10 @@ $apiInstance = new Troi\Api\UnitsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$client_id = 1; // int | Fetch all Currencies for the given clientId
 
 try {
-    $result = $apiInstance->miscUnitsGet();
+    $result = $apiInstance->miscUnitsGet($client_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UnitsApi->miscUnitsGet: ', $e->getMessage(), PHP_EOL;
@@ -48,7 +49,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **client_id** | **int**| Fetch all Currencies for the given clientId | |
 
 ### Return type
 

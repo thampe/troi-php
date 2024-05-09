@@ -5560,7 +5560,18 @@
         ],
         "summary": "Fetch all units",
         "description": "Fetch all units",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "clientId",
+            "in": "query",
+            "description": "Fetch all Currencies for the given clientId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "successful operation",

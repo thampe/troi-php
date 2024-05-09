@@ -131,15 +131,16 @@ class UnitsApi
      *
      * Fetch all units
      *
+     * @param  int $client_id Fetch all Currencies for the given clientId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['miscUnitsGet'] to see the possible values for this operation
      *
      * @throws \Troi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Troi\Model\ApiUnit[]|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response
      */
-    public function miscUnitsGet(string $contentType = self::contentTypes['miscUnitsGet'][0])
+    public function miscUnitsGet($client_id, string $contentType = self::contentTypes['miscUnitsGet'][0])
     {
-        list($response) = $this->miscUnitsGetWithHttpInfo($contentType);
+        list($response) = $this->miscUnitsGetWithHttpInfo($client_id, $contentType);
         return $response;
     }
 
@@ -148,15 +149,16 @@ class UnitsApi
      *
      * Fetch all units
      *
+     * @param  int $client_id Fetch all Currencies for the given clientId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['miscUnitsGet'] to see the possible values for this operation
      *
      * @throws \Troi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Troi\Model\ApiUnit[]|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function miscUnitsGetWithHttpInfo(string $contentType = self::contentTypes['miscUnitsGet'][0])
+    public function miscUnitsGetWithHttpInfo($client_id, string $contentType = self::contentTypes['miscUnitsGet'][0])
     {
-        $request = $this->miscUnitsGetRequest($contentType);
+        $request = $this->miscUnitsGetRequest($client_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -341,14 +343,15 @@ class UnitsApi
      *
      * Fetch all units
      *
+     * @param  int $client_id Fetch all Currencies for the given clientId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['miscUnitsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function miscUnitsGetAsync(string $contentType = self::contentTypes['miscUnitsGet'][0])
+    public function miscUnitsGetAsync($client_id, string $contentType = self::contentTypes['miscUnitsGet'][0])
     {
-        return $this->miscUnitsGetAsyncWithHttpInfo($contentType)
+        return $this->miscUnitsGetAsyncWithHttpInfo($client_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -361,15 +364,16 @@ class UnitsApi
      *
      * Fetch all units
      *
+     * @param  int $client_id Fetch all Currencies for the given clientId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['miscUnitsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function miscUnitsGetAsyncWithHttpInfo(string $contentType = self::contentTypes['miscUnitsGet'][0])
+    public function miscUnitsGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['miscUnitsGet'][0])
     {
         $returnType = '\Troi\Model\ApiUnit[]';
-        $request = $this->miscUnitsGetRequest($contentType);
+        $request = $this->miscUnitsGetRequest($client_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -410,13 +414,21 @@ class UnitsApi
     /**
      * Create request for operation 'miscUnitsGet'
      *
+     * @param  int $client_id Fetch all Currencies for the given clientId (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['miscUnitsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function miscUnitsGetRequest(string $contentType = self::contentTypes['miscUnitsGet'][0])
+    public function miscUnitsGetRequest($client_id, string $contentType = self::contentTypes['miscUnitsGet'][0])
     {
+
+        // verify the required parameter 'client_id' is set
+        if ($client_id === null || (is_array($client_id) && count($client_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $client_id when calling miscUnitsGet'
+            );
+        }
 
 
         $resourcePath = '/misc/units';
@@ -426,6 +438,15 @@ class UnitsApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $client_id,
+            'clientId', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
 
 
 
