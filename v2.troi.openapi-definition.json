@@ -6515,7 +6515,7 @@
             "example": "Customer / TROI_19_0001 / Project 1 / Subproject 1 / Calculation Position 1"
           },
           "Quantity": {
-            "type": "integer",
+            "type": "number",
             "example": 1
           },
           "SalePrice": {
