@@ -69,7 +69,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'is_external_service' => 'bool',
         'is_service_needed' => 'bool',
         'display_path' => 'string',
-        'quantity' => 'int',
+        'quantity' => 'float',
         'sale_price' => 'float',
         'purchase_price' => 'float',
         'total_calculation' => 'float',
