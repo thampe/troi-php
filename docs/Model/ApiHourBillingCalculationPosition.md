@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **is_external_service** | **bool** |  | [optional]
 **is_service_needed** | **bool** |  | [optional]
 **display_path** | **string** |  | [optional]
-**quantity** | **int** |  | [optional]
+**quantity** | **float** |  | [optional]
 **sale_price** | **float** |  | [optional]
 **purchase_price** | **float** |  | [optional]
 **total_calculation** | **float** |  | [optional]

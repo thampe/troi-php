@@ -69,7 +69,7 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'is_external_service' => 'bool',
         'is_service_needed' => 'bool',
         'display_path' => 'string',
-        'quantity' => 'int',
+        'quantity' => 'float',
         'sale_price' => 'float',
         'purchase_price' => 'float',
         'total_calculation' => 'float',
@@ -897,7 +897,7 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
     /**
      * Gets quantity
      *
-     * @return int|null
+     * @return float|null
      */
     public function getQuantity()
     {
@@ -907,7 +907,7 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
     /**
      * Sets quantity
      *
-     * @param int|null $quantity quantity
+     * @param float|null $quantity quantity
      *
      * @return self
      */

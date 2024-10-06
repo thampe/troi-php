@@ -216,7 +216,7 @@ try {
 ## `billingsHoursIdPut()`
 
 ```php
-billingsHoursIdPut($id, $billings_hours_id_put_request): \Troi\Model\ApiSyncItem[]
+billingsHoursIdPut($id, $billings_hours_id_put_request): \Troi\Model\ApiHourBilling
 ```
 
 Update Billing
@@ -262,7 +262,7 @@ try {
 
 ### Return type
 
-[**\Troi\Model\ApiSyncItem[]**](../Model/ApiSyncItem.md)
+[**\Troi\Model\ApiHourBilling**](../Model/ApiHourBilling.md)
 
 ### Authorization
 
@@ -280,7 +280,7 @@ try {
 ## `billingsHoursPost()`
 
 ```php
-billingsHoursPost($billings_hours_post_request): \Troi\Model\ApiSyncItem[]
+billingsHoursPost($billings_hours_post_request): \Troi\Model\ApiHourBilling
 ```
 
 Save Billing
@@ -324,7 +324,7 @@ try {
 
 ### Return type
 
-[**\Troi\Model\ApiSyncItem[]**](../Model/ApiSyncItem.md)
+[**\Troi\Model\ApiHourBilling**](../Model/ApiHourBilling.md)
 
 ### Authorization
 

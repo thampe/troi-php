@@ -1872,10 +1872,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ApiSyncItem"
-                  }
+                  "$ref": "#/components/schemas/ApiHourBilling"
                 }
               }
             }
@@ -2002,10 +1999,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ApiSyncItem"
-                  }
+                  "$ref": "#/components/schemas/ApiHourBilling"
                 }
               }
             }

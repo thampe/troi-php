@@ -891,7 +891,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets quantity
      *
-     * @return int|null
+     * @return float|null
      */
     public function getQuantity()
     {
@@ -901,7 +901,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets quantity
      *
-     * @param int|null $quantity quantity
+     * @param float|null $quantity quantity
      *
      * @return self
      */

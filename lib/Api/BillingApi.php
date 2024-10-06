@@ -1480,7 +1480,7 @@ class BillingApi
      *
      * @throws \Troi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Troi\Model\ApiSyncItem[]|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response
+     * @return \Troi\Model\ApiHourBilling|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response
      */
     public function billingsHoursIdPut($id, $billings_hours_id_put_request, string $contentType = self::contentTypes['billingsHoursIdPut'][0])
     {
@@ -1499,7 +1499,7 @@ class BillingApi
      *
      * @throws \Troi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Troi\Model\ApiSyncItem[]|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Troi\Model\ApiHourBilling|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function billingsHoursIdPutWithHttpInfo($id, $billings_hours_id_put_request, string $contentType = self::contentTypes['billingsHoursIdPut'][0])
     {
@@ -1542,11 +1542,11 @@ class BillingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Troi\Model\ApiSyncItem[]' === '\SplFileObject') {
+                    if ('\Troi\Model\ApiHourBilling' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Troi\Model\ApiSyncItem[]' !== 'string') {
+                        if ('\Troi\Model\ApiHourBilling' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1564,7 +1564,7 @@ class BillingApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Troi\Model\ApiSyncItem[]', []),
+                        ObjectSerializer::deserialize($content, '\Troi\Model\ApiHourBilling', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1651,7 +1651,7 @@ class BillingApi
                     ];
             }
 
-            $returnType = '\Troi\Model\ApiSyncItem[]';
+            $returnType = '\Troi\Model\ApiHourBilling';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1684,7 +1684,7 @@ class BillingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Troi\Model\ApiSyncItem[]',
+                        '\Troi\Model\ApiHourBilling',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1754,7 +1754,7 @@ class BillingApi
      */
     public function billingsHoursIdPutAsyncWithHttpInfo($id, $billings_hours_id_put_request, string $contentType = self::contentTypes['billingsHoursIdPut'][0])
     {
-        $returnType = '\Troi\Model\ApiSyncItem[]';
+        $returnType = '\Troi\Model\ApiHourBilling';
         $request = $this->billingsHoursIdPutRequest($id, $billings_hours_id_put_request, $contentType);
 
         return $this->client
@@ -1914,7 +1914,7 @@ class BillingApi
      *
      * @throws \Troi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Troi\Model\ApiSyncItem[]|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response
+     * @return \Troi\Model\ApiHourBilling|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response
      */
     public function billingsHoursPost($billings_hours_post_request, string $contentType = self::contentTypes['billingsHoursPost'][0])
     {
@@ -1932,7 +1932,7 @@ class BillingApi
      *
      * @throws \Troi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Troi\Model\ApiSyncItem[]|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Troi\Model\ApiHourBilling|\Troi\Model\AbsencesGet400Response|\Troi\Model\AbsencesGet401Response|\Troi\Model\AbsencesPost404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function billingsHoursPostWithHttpInfo($billings_hours_post_request, string $contentType = self::contentTypes['billingsHoursPost'][0])
     {
@@ -1975,11 +1975,11 @@ class BillingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Troi\Model\ApiSyncItem[]' === '\SplFileObject') {
+                    if ('\Troi\Model\ApiHourBilling' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Troi\Model\ApiSyncItem[]' !== 'string') {
+                        if ('\Troi\Model\ApiHourBilling' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1997,7 +1997,7 @@ class BillingApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Troi\Model\ApiSyncItem[]', []),
+                        ObjectSerializer::deserialize($content, '\Troi\Model\ApiHourBilling', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2084,7 +2084,7 @@ class BillingApi
                     ];
             }
 
-            $returnType = '\Troi\Model\ApiSyncItem[]';
+            $returnType = '\Troi\Model\ApiHourBilling';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2117,7 +2117,7 @@ class BillingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Troi\Model\ApiSyncItem[]',
+                        '\Troi\Model\ApiHourBilling',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2185,7 +2185,7 @@ class BillingApi
      */
     public function billingsHoursPostAsyncWithHttpInfo($billings_hours_post_request, string $contentType = self::contentTypes['billingsHoursPost'][0])
     {
-        $returnType = '\Troi\Model\ApiSyncItem[]';
+        $returnType = '\Troi\Model\ApiHourBilling';
         $request = $this->billingsHoursPostRequest($billings_hours_post_request, $contentType);
 
         return $this->client
