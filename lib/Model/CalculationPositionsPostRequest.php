@@ -98,8 +98,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'e_tag' => 'string',
         'is_deleted' => 'bool',
         'total_offer' => 'float',
-        'rsas' => '\Troi\Model\ApiSyncItem[]',
-        'last_rsa_date' => '\Troi\Model\ApiSyncItem',
         'cp_is_cleared' => 'bool',
         'class_name' => 'string'
     ];
@@ -152,8 +150,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'e_tag' => null,
         'is_deleted' => null,
         'total_offer' => null,
-        'rsas' => null,
-        'last_rsa_date' => null,
         'cp_is_cleared' => null,
         'class_name' => null
     ];
@@ -204,8 +200,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'e_tag' => false,
         'is_deleted' => false,
         'total_offer' => false,
-        'rsas' => true,
-        'last_rsa_date' => false,
         'cp_is_cleared' => false,
         'class_name' => false
     ];
@@ -336,8 +330,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'e_tag' => 'ETag',
         'is_deleted' => 'IsDeleted',
         'total_offer' => 'TotalOffer',
-        'rsas' => 'RSAs',
-        'last_rsa_date' => 'lastRsaDate',
         'cp_is_cleared' => 'cpIsCleared',
         'class_name' => 'ClassName'
     ];
@@ -388,8 +380,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'e_tag' => 'setETag',
         'is_deleted' => 'setIsDeleted',
         'total_offer' => 'setTotalOffer',
-        'rsas' => 'setRsas',
-        'last_rsa_date' => 'setLastRsaDate',
         'cp_is_cleared' => 'setCpIsCleared',
         'class_name' => 'setClassName'
     ];
@@ -440,8 +430,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'e_tag' => 'getETag',
         'is_deleted' => 'getIsDeleted',
         'total_offer' => 'getTotalOffer',
-        'rsas' => 'getRsas',
-        'last_rsa_date' => 'getLastRsaDate',
         'cp_is_cleared' => 'getCpIsCleared',
         'class_name' => 'getClassName'
     ];
@@ -543,8 +531,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         $this->setIfExists('e_tag', $data ?? [], null);
         $this->setIfExists('is_deleted', $data ?? [], null);
         $this->setIfExists('total_offer', $data ?? [], null);
-        $this->setIfExists('rsas', $data ?? [], null);
-        $this->setIfExists('last_rsa_date', $data ?? [], null);
         $this->setIfExists('cp_is_cleared', $data ?? [], null);
         $this->setIfExists('class_name', $data ?? [], null);
     }
@@ -1673,67 +1659,6 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
             throw new \InvalidArgumentException('non-nullable total_offer cannot be null');
         }
         $this->container['total_offer'] = $total_offer;
-
-        return $this;
-    }
-
-    /**
-     * Gets rsas
-     *
-     * @return \Troi\Model\ApiSyncItem[]|null
-     */
-    public function getRsas()
-    {
-        return $this->container['rsas'];
-    }
-
-    /**
-     * Sets rsas
-     *
-     * @param \Troi\Model\ApiSyncItem[]|null $rsas rsas
-     *
-     * @return self
-     */
-    public function setRsas($rsas)
-    {
-        if (is_null($rsas)) {
-            array_push($this->openAPINullablesSetToNull, 'rsas');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('rsas', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['rsas'] = $rsas;
-
-        return $this;
-    }
-
-    /**
-     * Gets last_rsa_date
-     *
-     * @return \Troi\Model\ApiSyncItem|null
-     */
-    public function getLastRsaDate()
-    {
-        return $this->container['last_rsa_date'];
-    }
-
-    /**
-     * Sets last_rsa_date
-     *
-     * @param \Troi\Model\ApiSyncItem|null $last_rsa_date last_rsa_date
-     *
-     * @return self
-     */
-    public function setLastRsaDate($last_rsa_date)
-    {
-        if (is_null($last_rsa_date)) {
-            throw new \InvalidArgumentException('non-nullable last_rsa_date cannot be null');
-        }
-        $this->container['last_rsa_date'] = $last_rsa_date;
 
         return $this;
     }

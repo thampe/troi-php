@@ -6619,16 +6619,6 @@
             "type": "number",
             "example": 10
           },
-          "RSAs": {
-            "type": "array",
-            "nullable": true,
-            "items": {
-              "$ref": "#/components/schemas/ApiSyncItem"
-            }
-          },
-          "lastRsaDate": {
-            "$ref": "#/components/schemas/ApiSyncItem"
-          },
           "cpIsCleared": {
             "type": "boolean",
             "example": false
