@@ -6626,8 +6626,7 @@
             }
           },
           "lastRsaDate": {
-            "type": "string",
-            "example": ""
+            "$ref": "#/components/schemas/ApiSyncItem"
           },
           "cpIsCleared": {
             "type": "boolean",

@@ -99,7 +99,7 @@ class ApiHourBillingCalculationPosition implements ModelInterface, ArrayAccess, 
         'is_deleted' => 'bool',
         'total_offer' => 'float',
         'rsas' => '\Troi\Model\ApiSyncItem[]',
-        'last_rsa_date' => 'string',
+        'last_rsa_date' => '\Troi\Model\ApiSyncItem',
         'cp_is_cleared' => 'bool',
         'class_name' => 'string'
     ];
@@ -1704,7 +1704,7 @@ class ApiHourBillingCalculationPosition implements ModelInterface, ArrayAccess, 
     /**
      * Gets last_rsa_date
      *
-     * @return string|null
+     * @return \Troi\Model\ApiSyncItem|null
      */
     public function getLastRsaDate()
     {
@@ -1714,7 +1714,7 @@ class ApiHourBillingCalculationPosition implements ModelInterface, ArrayAccess, 
     /**
      * Sets last_rsa_date
      *
-     * @param string|null $last_rsa_date last_rsa_date
+     * @param \Troi\Model\ApiSyncItem|null $last_rsa_date last_rsa_date
      *
      * @return self
      */
