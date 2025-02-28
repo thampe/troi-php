@@ -44,7 +44,7 @@ Name | Type | Description | Notes
 **e_tag** | **string** |  | [optional]
 **is_deleted** | **bool** |  | [optional]
 **total_offer** | **float** |  | [optional]
-**rsas** | **string** |  | [optional]
+**rsas** | [**\Troi\Model\ApiSyncItem[]**](ApiSyncItem.md) |  | [optional]
 **last_rsa_date** | **string** |  | [optional]
 **cp_is_cleared** | **bool** |  | [optional]
 **class_name** | **string** |  | [optional]

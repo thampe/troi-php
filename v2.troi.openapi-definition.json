@@ -6620,8 +6620,10 @@
             "example": 10
           },
           "RSAs": {
-            "type": "string",
-            "example": ""
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiSyncItem"
+            }
           },
           "lastRsaDate": {
             "type": "string",

@@ -98,7 +98,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
         'e_tag' => 'string',
         'is_deleted' => 'bool',
         'total_offer' => 'float',
-        'rsas' => 'string',
+        'rsas' => '\Troi\Model\ApiSyncItem[]',
         'last_rsa_date' => 'string',
         'cp_is_cleared' => 'bool',
         'class_name' => 'string'
@@ -1674,7 +1674,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets rsas
      *
-     * @return string|null
+     * @return \Troi\Model\ApiSyncItem[]|null
      */
     public function getRsas()
     {
@@ -1684,7 +1684,7 @@ class ApiCalculationPosition implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets rsas
      *
-     * @param string|null $rsas rsas
+     * @param \Troi\Model\ApiSyncItem[]|null $rsas rsas
      *
      * @return self
      */
