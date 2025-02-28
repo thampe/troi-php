@@ -6627,7 +6627,6 @@
             }
           },
           "lastRsaDate": {
-            "nullable": true,
             "$ref": "#/components/schemas/ApiSyncItem"
           },
           "cpIsCleared": {
