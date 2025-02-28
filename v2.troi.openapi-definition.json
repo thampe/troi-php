@@ -6621,11 +6621,13 @@
           },
           "RSAs": {
             "type": "array",
+            "nullable": true,
             "items": {
               "$ref": "#/components/schemas/ApiSyncItem"
             }
           },
           "lastRsaDate": {
+            "nullable": true,
             "$ref": "#/components/schemas/ApiSyncItem"
           },
           "cpIsCleared": {

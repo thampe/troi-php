@@ -204,7 +204,7 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
         'e_tag' => false,
         'is_deleted' => false,
         'total_offer' => false,
-        'rsas' => false,
+        'rsas' => true,
         'last_rsa_date' => false,
         'cp_is_cleared' => false,
         'class_name' => false
@@ -1697,7 +1697,14 @@ class CalculationPositionsPostRequest implements ModelInterface, ArrayAccess, \J
     public function setRsas($rsas)
     {
         if (is_null($rsas)) {
-            throw new \InvalidArgumentException('non-nullable rsas cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'rsas');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('rsas', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['rsas'] = $rsas;
 
